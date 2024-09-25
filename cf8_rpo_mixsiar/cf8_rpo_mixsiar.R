@@ -53,7 +53,7 @@ setwd("~/cf8_rpo/cf8_rpo_mixsiar")
 ## Import model input csv files
 
 # Load csv file of mixture data
-mix <- load_mix_data(filename = "input/mix_depth_1_split_1.csv",
+mix <- load_mix_data(filename = "mix/mix_depth_1_split_1.csv",
                      iso_names = c("d13C", "FM"),
                      factors = NULL,
                      fac_random = NULL,
@@ -61,14 +61,14 @@ mix <- load_mix_data(filename = "input/mix_depth_1_split_1.csv",
                      cont_effects = NULL)
 
 # Load csv file of endmember (source) data
-source <- load_source_data(filename = "input/source_depth_1_split_1.csv",
+source <- load_source_data(filename = "source/source_depth_1_split_1.csv",
                            source_factors = NULL,
                            conc_dep = FALSE,
                            data_type = "means",
                            mix)
 
 # Load csv file of discrimination factors for each endmember (all set to 0)
-discr <- load_discr_data(filename = "input/discr_depth_1_split_1.csv",
+discr <- load_discr_data(filename = "discr/discr_depth_1_split_1.csv",
                          mix)
 
 # Plot endmember statistics on tracer axes
