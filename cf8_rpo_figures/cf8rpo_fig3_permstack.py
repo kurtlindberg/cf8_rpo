@@ -130,7 +130,7 @@ mix_mi5stdev_ens, mix_mis5stdev = cf8_fun.getlipd('Lindberg.CF8.2024.lpd',
 # CF817-03 macrofossil fraction modern values reported in Crump et al. (2021)
 # DOI: https://doi.org/10.1073/pnas.2019069118
 # Import macrofossil fraction modern from NOAA paleoclimate data sheet
-cf8_noaa_chron = pd.read_excel("Lindberg_2024_CF8_NOAA_paleoclimate.xlsm",
+cf8_noaa_chron = pd.read_excel("Lindberg_CF8_RPO_biogeochem.xlsm",
                          sheet_name="Chronology",
                          header=19)
 macro_fm = np.array(cf8_noaa_chron.fraction_modern)
