@@ -41,7 +41,7 @@ library(rjags)
 library(R2jags)
 library(MixSIAR)
 
-# Set working directory
+# Set working directory (change path to cf8_rpo as necessary)
 setwd("~/cf8_rpo/cf8_rpo_mixsiar")
 
 ### EXAMPLE SCRIPT FROM SUPPLEMETNAL TABLE 2 ###
