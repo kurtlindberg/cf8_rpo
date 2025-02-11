@@ -34,7 +34,6 @@ library(bayesplot)
 library(splancs)
 library(dplyr)
 library(devtools)
-library(OpenMx)
 
 # The following packages require JAGS (Just Another Gibbs Sampler) to be installed
 # Files and installation instructions: https://sourceforge.net/projects/mcmc-jags/
