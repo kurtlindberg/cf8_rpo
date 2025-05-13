@@ -8,7 +8,7 @@
 ## Code Author: Kurt R. Lindberg
 
 ### Figure 5 ###
-## (a) Permafrost OC mass accumulation rates
+## (a) Permafrost endmember OC mass accumulation rates
 ## (b) Chironomid cold taxa relative summer temperature
 ## (c) Agassiz ice cap d18O temperature
 ## (d) Elemental Analyzer % Carbon
@@ -261,30 +261,48 @@ ag_d18o_all = pd.read_excel(
 ag_d18o_avg = ag_d18o_all[['a77', 'a79', 'a84', 'a87']].mean(axis=1)
 
 
-## Figure script
+## Figure 5 a-d script
 fig, axs = plt.subplots(4, 1)
 
+## Figure 5a: Permafrost endmember OC mass accumulation rates 
 ax = axs[0]
-ax.plot(mix_post.ageMedian, (oc_acc_mean*mix_post.paleoData_values),
-        color='orange', linestyle='-', linewidth=1, marker='o', markersize=4, label='Postglacial')
-ax.plot(mix_post.ageMedian, (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
-        color='orange', linewidth=0)
-ax.plot(mix_post.ageMedian, (oc_acc_psd*(mix_post.paleoData_values+mix_poststdev.paleoData_values)),
-        color='orange', linewidth=0)
-ax.fill_between(mix_post.ageMedian,
-                (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
-                (oc_acc_psd*(mix_post.paleoData_values+mix_poststdev.paleoData_values)),
-                color='orange', alpha=0.15)
-ax.plot(mix_mis5.ageMedian, (oc_acc_mean*mix_mis5.paleoData_values),
-        color='black', linestyle='-', linewidth=1, marker='o', markersize=4, label='MIS 5')
-ax.plot(mix_mis5.ageMedian, (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
-        color='black', linewidth=0)
-ax.plot(mix_mis5.ageMedian, (oc_acc_psd*(mix_mis5.paleoData_values+mix_mis5stdev.paleoData_values)),
-        color='black', linewidth=0)
-ax.fill_between(mix_mis5.ageMedian,
-                (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
-                (oc_acc_psd*(mix_mis5.paleoData_values+mix_mis5stdev.paleoData_values)),
-                color='black', alpha=0.15)
+ax.plot(
+  mix_post.ageMedian, (oc_acc_mean*mix_post.paleoData_values),
+  color='orange', linestyle='-', linewidth=1, marker='o', markersize=4, label='Postglacial'
+)
+ax.plot(
+  mix_post.ageMedian, (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
+  color='orange', linewidth=0
+)
+ax.plot(
+  mix_post.ageMedian, (oc_acc_psd*(mix_post.paleoData_values+mix_poststdev.paleoData_values)),
+  color='orange', linewidth=0
+)
+ax.fill_between(
+  mix_post.ageMedian,
+  (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
+  (oc_acc_psd*(mix_post.paleoData_values+mix_poststdev.paleoData_values)),
+  color='orange', alpha=0.15
+)
+ax.plot(
+  mix_mis5.ageMedian, (oc_acc_mean*mix_mis5.paleoData_values),
+  color='black', linestyle='-', linewidth=1, marker='o', markersize=4, label='MIS 5'
+)
+ax.plot(
+  mix_mis5.ageMedian, (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
+  color='black', linewidth=0
+)
+ax.plot(
+  mix_mis5.ageMedian, (oc_acc_psd*(mix_mis5.paleoData_values+mix_mis5stdev.paleoData_values)),
+  color='black', linewidth=0
+)
+ax.fill_between(
+  mix_mis5.ageMedian,
+  (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
+  (oc_acc_psd*(mix_mis5.paleoData_values+mix_mis5stdev.paleoData_values)),
+  color='black', alpha=0.15
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([-1, 10])
 ax.set_xticks([])
@@ -294,12 +312,22 @@ ax.set_ylabel('OC Accumulation Rate (g OC/m2/yr)')
 ax.legend([])
 ax.grid(visible=False)
 
+## Figure 5b: 
 ax = axs[1]
-cf8_chir_lt10_ens.common_time(time_axis=cf8_chir_lt10.ageMedian, bounds_error=False).plot_envelope(ax=ax,
-                                                                                                   curve_clr='#d7191c',
-                                                                                                   shade_clr='#d7191c',
-                                                                                                   plot_legend=False)
-ax.plot(cf8_chir_lt10.ageMedian, cf8_chir_lt10.paleoData_values, linewidth=1, linestyle='--', color='black', zorder=100)
+cf8_chir_lt10_ens.common_time(
+  time_axis=cf8_chir_lt10.ageMedian,
+  bounds_error=False
+).plot_envelope(
+  ax=ax,
+  curve_clr='#d7191c',
+  shade_clr='#d7191c',
+  plot_legend=False
+)
+ax.plot(
+  cf8_chir_lt10.ageMedian, cf8_chir_lt10.paleoData_values,
+  linewidth=1, linestyle='--', color='black', zorder=100
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([50, 0])
 ax.set_xticks([])
@@ -312,8 +340,13 @@ ax.yaxis.set_ticks_position("right")
 ax.legend([])
 ax.grid(visible=False)
 
+## Figure 5c:
 ax = axs[2]
-ax.plot((ag_d18o_all.age-50), ag_d18o_avg, color='black', linewidth=1)
+ax.plot(
+  (ag_d18o_all.age-50), ag_d18o_avg,
+  color='black', linewidth=1
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([-30, -25])
 ax.set_xticks([])
@@ -323,12 +356,22 @@ ax.set_xlabel("")
 ax.set_ylabel("Aggasiz Ice Core d18O (permil)")
 ax.grid(visible=False)
 
+## Figure 5d:
 ax = axs[3]
-ea_totalc_ens.common_time(time_axis=ea_totalc.ageMedian, bounds_error=False).plot_envelope(ax=ax,
-                                                                                           curve_clr='#5e3c99',
-                                                                                           shade_clr='#5e3c99',
-                                                                                           plot_legend=False)
-ax.plot(ea_totalc.ageMedian, ea_totalc.paleoData_values, linewidth=1, linestyle='--', color='black', zorder=100)
+ea_totalc_ens.common_time(
+  time_axis=ea_totalc.ageMedian,
+  bounds_error=False
+).plot_envelope(
+  ax=ax,
+  curve_clr='#5e3c99',
+  shade_clr='#5e3c99',
+  plot_legend=False
+)
+ax.plot(
+  ea_totalc.ageMedian, ea_totalc.paleoData_values,
+  linewidth=1, linestyle='--', color='black', zorder=100
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([0, 16])
 ax.set_xticks([])
@@ -342,7 +385,7 @@ ax.legend([])
 ax.grid(visible=False)
 
 figure5_1 = plt.gcf()
-figure5_1.savefig('cf8rpo_figure5_1.svg')
+# figure5_1.savefig('cf8rpo_figure5_1.svg')
 
 
 fig, axs = plt.subplots(4, 1)
