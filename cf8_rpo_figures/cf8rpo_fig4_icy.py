@@ -104,9 +104,11 @@ rpo_depth_ens, rpo_depth = cf8_fun.getlipd(
 ## Calculations for CO2 amount-weighted bulk RPO, inverse CO2 cummulative yield
 ## CF817-03 macrofossil fraction modern values reported in Crump et al. (2021)
 ## DOI: https://doi.org/10.1073/pnas.2019069118
-cf8_noaa_chron = pd.read_excel("Lindberg_2024_CF8_NOAA_paleoclimate.xlsm",
-                         sheet_name="Chronology",
-                         header=19)
+cf8_noaa_chron = pd.read_excel(
+  "Lindberg_2024_CF8_NOAA_paleoclimate.xlsm",
+  sheet_name="Chronology",
+  header=19
+)
 macro_fm = np.array(cf8_noaa_chron.fraction_modern)
 
 co2_df = pd.concat(
