@@ -312,7 +312,7 @@ ax.set_ylabel('OC Accumulation Rate (g OC/m2/yr)')
 ax.legend([])
 ax.grid(visible=False)
 
-## Figure 5b: 
+## Figure 5b: Chironomid cold taxa relative summer temperature
 ax = axs[1]
 cf8_chir_lt10_ens.common_time(
   time_axis=cf8_chir_lt10.ageMedian,
@@ -340,7 +340,7 @@ ax.yaxis.set_ticks_position("right")
 ax.legend([])
 ax.grid(visible=False)
 
-## Figure 5c:
+## Figure 5c: Agassiz ice cap d18O temperature
 ax = axs[2]
 ax.plot(
   (ag_d18o_all.age-50), ag_d18o_avg,
@@ -356,7 +356,7 @@ ax.set_xlabel("")
 ax.set_ylabel("Aggasiz Ice Core d18O (permil)")
 ax.grid(visible=False)
 
-## Figure 5d:
+## Figure 5d: Elemental Analyzer % Carbon
 ax = axs[3]
 ea_totalc_ens.common_time(
   time_axis=ea_totalc.ageMedian,
@@ -388,14 +388,24 @@ figure5_1 = plt.gcf()
 # figure5_1.savefig('cf8rpo_figure5_1.svg')
 
 
+## Figure 5 e-g script
 fig, axs = plt.subplots(4, 1)
 
+## Figure 5e: Chironomid head capsule concentration
 ax = axs[0]
-cf8_chir_headcount_ens.common_time(time_axis=cf8_chir_headcount.ageMedian, bounds_error=False).plot_envelope(ax=ax,
-                                                                                                   curve_clr='blue',
-                                                                                                   shade_clr='blue',
-                                                                                                   plot_legend=False)
-ax.plot(cf8_chir_headcount.ageMedian, cf8_chir_headcount.paleoData_values, linewidth=1, linestyle='--', color='black', zorder=100)
+cf8_chir_headcount_ens.common_time(
+  time_axis=cf8_chir_headcount.ageMedian,
+  bounds_error=False
+).plot_envelope(ax=ax,
+  curve_clr='blue',
+  shade_clr='blue',
+  plot_legend=False
+)
+ax.plot(
+  cf8_chir_headcount.ageMedian, cf8_chir_headcount.paleoData_values,
+  linewidth=1, linestyle='--', color='black', zorder=100
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([0, 600])
 ax.set_xticks([])
@@ -406,12 +416,22 @@ ax.set_ylabel('Chironomid Head Capsuled per cc wet sed.')
 ax.legend([])
 ax.grid(visible=False)
 
+## Figure 5f: Elemental Analyzer Carbon:Nitrogen
 ax = axs[1]
-ea_cn_ens.common_time(time_axis=ea_cn.ageMedian, bounds_error=False).plot_envelope(ax=ax,
-                                                                                   curve_clr='#4dac26',
-                                                                                   shade_clr='#4dac26',
-                                                                                   plot_legend=False)
-ax.plot(ea_cn.ageMedian, ea_cn.paleoData_values, linewidth=1, linestyle='--', color='black', zorder=100)
+ea_cn_ens.common_time(
+  time_axis=ea_cn.ageMedian,
+  bounds_error=False
+).plot_envelope(
+  ax=ax,
+  curve_clr='#4dac26',
+  shade_clr='#4dac26',
+  plot_legend=False
+)
+ax.plot(
+  ea_cn.ageMedian, ea_cn.paleoData_values,
+  linewidth=1, linestyle='--', color='black', zorder=100
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([8 ,16])
 ax.set_xticks([])
@@ -423,12 +443,22 @@ ax.yaxis.set_ticks_position("right")
 ax.legend([])
 ax.grid(visible=False)
 
+## Figure 5g: Magnetic susceptibility
 ax = axs[2]
-ms_ens.common_time(time_axis=ms.ageMedian, bounds_error=False).plot_envelope(ax=ax,
-                                                                                   curve_clr='gray',
-                                                                                   shade_clr='gray',
-                                                                                   plot_legend=False)
-ax.plot(ms.ageMedian, ms.paleoData_values, linewidth=1, linestyle='--', color='black', zorder=100)
+ms_ens.common_time(
+  time_axis=ms.ageMedian,
+  bounds_error=False
+).plot_envelope(
+  ax=ax,
+  curve_clr='gray',
+  shade_clr='gray',
+  plot_legend=False
+)
+ax.plot(
+  ms.ageMedian, ms.paleoData_values,
+  linewidth=1, linestyle='--', color='black', zorder=100
+)
+
 ax.set_xlim([12500, 0])
 ax.set_ylim([0, 150])
 ax.set_xticks(ticks=[12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 2000, 1000, 0],
@@ -441,4 +471,4 @@ ax.grid(visible=False)
 fig.delaxes(axs[3])
 
 figure5_2 = plt.gcf()
-figure5_2.savefig('cf8rpo_figure5_2.svg')
+# figure5_2.savefig('cf8rpo_figure5_2.svg')
