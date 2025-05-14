@@ -55,18 +55,18 @@ rpo_pos = np.full((1, len(rpo_depth.depth)), 1)
 ea_pos = np.full((1, len(ea_depth.depth)), 3)
 
 ## Figure S1 b-c script
-fig, axs = plt.subplots(1, 4)
+fig, axs = plt.subplots(1,4)
 
 ## Figure S1b: RPO and EA subsampling depths
 ax = axs[0]
 ax.scatter(rpo_pos, rpo_depth.depth, marker='o', color='gray', edgecolors='black', linewidth=0.75, label='RPO')
 ax.scatter(ea_pos, ea_depth.depth, marker='d', color='gray', edgecolors='black', linewidth=0.75, label='EA')
 
-ax.set_xlim([0, 5])
+ax.set_xlim([0,5])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_ylim([112, 0])
-ax.set_yticks(ticks=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110])
+ax.set_ylim([112,0])
+ax.set_yticks(ticks=[0,10,20,30,40,50,60,70,80,90,100,110])
 ax.set_ylabel("CF817-03 Depth (cm)")
 ax.legend(loc='lower center', bbox_to_anchor=(0.5,1))
 ax.grid(visible=False)
@@ -75,9 +75,9 @@ ax.grid(visible=False)
 ax = axs[1]
 ax.plot(ms.paleoData_values, ms.depth, color='black', linewidth=0.75)
 
-ax.set_ylim([112, 0])
-ax.set_xlim([-5, 150])
-ax.set_xticks(ticks=[0, 50, 100, 150])
+ax.set_ylim([112,0])
+ax.set_xlim([-5,150])
+ax.set_xticks(ticks=[0,50,100,150])
 ax.set_yticks([])
 ax.set_yticklabels("")
 ax.set_xlabel('MS')
@@ -87,5 +87,5 @@ fig.delaxes(axs[2])
 fig.delaxes(axs[3])
 # fig.delaxes(axs[4])
 
-figures1bc = plt.gcf()
-# figures1bc.savefig('cf8rpo_figures1bc.svg')
+figs1bc = plt.gcf()
+# figs1bc.savefig('cf8rpo_figs1bc_strat.svg')
