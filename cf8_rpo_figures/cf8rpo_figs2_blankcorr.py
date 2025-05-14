@@ -63,12 +63,12 @@ ax.set_xticks(
     labels=[5,15,45,75,85,95,105,110]
 )
 ax.set_yticks(
-    ticks=[12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 2000, 1000, 0],
-    labels=[12000, "", 10000, "", 8000, "", 6000, "", 4000, "", 2000, "", 0]
+    ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+    labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
 )
 ax.set_xlabel('Sample Top Depth (cm)')
 ax.set_ylabel('RPO CO2 Age (14C yrs)')
 
-figures2 = plt.gcf()
-# figures2.savefig('cf8rpo_figures2.svg')
+figs2 = plt.gcf()
+# figs2.savefig('cf8rpo_figs2_blankcorr.svg')
 
