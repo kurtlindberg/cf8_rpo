@@ -10,7 +10,6 @@
 ### Figure S2 in Supporting Information S1 ###
 ## RPO CO2 14C ages pre- and post-blank correction
 
-## panels a and d added using Inkscape
 
 ## See cf8_rpo_conda_env.yml
 import matplotlib.pyplot as plt
