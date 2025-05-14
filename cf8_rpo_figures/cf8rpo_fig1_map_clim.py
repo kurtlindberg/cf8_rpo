@@ -55,6 +55,7 @@ fig1a = plt.gcf()
 
 
 ## ERA5 climatology data from Climate Reanalyzer (https://climatereanalyzer.org/research_tools/monthly_tseries/)
+## ERA5 DOI: https://doi.org/10.1002/qj.3803
 tempc = pd.read_csv('CF8_ClimRean_temp_all.csv', header=8)
 precipmm = pd.read_csv('CF8_ClimRean_precip_all.csv', header=8)
 
