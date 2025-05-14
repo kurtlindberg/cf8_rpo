@@ -219,7 +219,7 @@ print(modelb.coef_)
 print(modelb.intercept_)
 print(bulk_corr)
 
-figure4_d14c = plt.gcf()
-# figure4_d14c.savefig('cf8rpo_fig4_d14c.svg')
+fig4 = plt.gcf()
+# fig4.savefig('cf8rpo_fig4_icy.svg')
 
 
