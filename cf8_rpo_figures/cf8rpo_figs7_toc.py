@@ -20,6 +20,7 @@ import pyleoclim as pyleo
 from pylipd.lipd import LiPD
 import cf8rpo_functions as cf8_fun
 
+## Figure parameters for editing in Inkscape
 plt.rcParams['svg.fonttype'] = 'none'
 plt.rcParams['font.size'] = 10
 plt.rcParams['font.family'] = "Liberation Sans"
