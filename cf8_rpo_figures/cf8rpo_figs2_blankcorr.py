@@ -69,6 +69,6 @@ ax.set_yticks(
 ax.set_xlabel('Sample Top Depth (cm)')
 ax.set_ylabel('RPO CO2 Age (14C yrs)')
 
-sfigure_blank = plt.gcf()
-# sfigure_blank.savefig('cf8rpo_sfig_blank.svg')
+figures2 = plt.gcf()
+# figures2.savefig('cf8rpo_figures2.svg')
 
