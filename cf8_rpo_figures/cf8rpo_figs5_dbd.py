@@ -48,7 +48,7 @@ rpo_dbdstdev_ens, rpo_dbdstdev = cf8_fun.getlipd(
 
 
 ## Figure S5 script
-fig, axs = plt.subplots(1, 2)
+fig, axs = plt.subplots(1,2)
 
 ax = axs[0]
 ax.plot(cf8_dbd02.paleoData_values, cf8_dbd02.depth, linewidth=0.75, color='black', zorder=10)
@@ -67,10 +67,10 @@ ax.axvspan(
   ymin=((120-107)/120), ymax=1, color='#d95f0e', alpha=0.25
 )
 
-ax.set_xticks(ticks=[0, 0.25, 0.5, 0.75, 1.0, 1.25])
-ax.set_yticks(ticks=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120])
-ax.set_xlim([0, 1.25])
-ax.set_ylim([120, 0])
+ax.set_xticks(ticks=[0,0.25,0.5,0.75,1.0,1.25])
+ax.set_yticks(ticks=[0,10,20,30,40,50,60,70,80,90,100,110,120])
+ax.set_xlim([0,1.25])
+ax.set_ylim([120,0])
 ax.set_xlabel('Dry Bulk Density (g/cm3)')
 ax.set_ylabel('Core 02-CF8-01 Depth (cm)')
 ax.grid(visible=False)
