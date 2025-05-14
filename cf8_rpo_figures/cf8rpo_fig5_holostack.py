@@ -202,7 +202,7 @@ ms_ens, ms = cf8_fun.getlipd(
 # CF817-03 macrofossil fraction modern values reported in Crump et al. (2021)
 # DOI: https://doi.org/10.1073/pnas.2019069118
 cf8_noaa_chron = pd.read_excel(
-  "Lindberg_2024_CF8_NOAA_paleoclimate.xlsm",
+  "Lindberg_CF8_RPO_biogeochem.xlsm",
   sheet_name="Chronology",
   header=19
 )
