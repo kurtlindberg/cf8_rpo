@@ -1,31 +1,33 @@
-## Lake CF8 RPO Supplemental Figure X
-# Compiled MixSIAR endmember d13C by sample type
+## Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
 
-# Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
+## Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
+## Gregory A. de Wet, Benjamin V. Gaglioti
 
-# Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
-# Gregory A. de Wet, Benjamin V. Gaglioti
+## DOI: pending
 
-# DOI: pending
+## Code Author: Kurt R. Lindberg
 
-# Author: Kurt R. Lindberg
-# Last edited: 04/01/2025
+### Figure S2 in Supporting Information S1 ###
+## RPO CO2 14C ages pre- and post-blank correction
 
+## panels a and d added using Inkscape
+
+## See cf8_rpo_conda_env.yml
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 
-# Set graphical parameters for editing in Inkscape
+## Figure parameters for editing in Inkscape
 plt.rcParams['svg.fonttype'] = 'none'
 plt.rcParams['font.size'] = 10
 plt.rcParams['font.family'] = "Liberation Sans"
 
-# Import data from blank correction comparison spreadsheet
+## Import data from blank correction comparison spreadsheet
 blanks = pd.read_excel('cf8rpo_blankcorrect.xlsx')
 
 
-# Figure script
+## Figure S2 script
 
 rpo_colors = [
     '#2166ac',
@@ -67,7 +69,6 @@ ax.set_yticks(
 )
 ax.set_xlabel('Sample Top Depth (cm)')
 ax.set_ylabel('RPO CO2 Age (14C yrs)')
-
 
 sfigure_blank = plt.gcf()
 # sfigure_blank.savefig('cf8rpo_sfig_blank.svg')
