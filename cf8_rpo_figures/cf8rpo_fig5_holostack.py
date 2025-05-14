@@ -262,7 +262,7 @@ ag_d18o_avg = ag_d18o_all[['a77', 'a79', 'a84', 'a87']].mean(axis=1)
 
 
 ## Figure 5 a-d script
-fig, axs = plt.subplots(4, 1)
+fig, axs = plt.subplots(4,1)
 
 ## Figure 5a: Permafrost endmember OC mass accumulation rates 
 ax = axs[0]
@@ -303,11 +303,11 @@ ax.fill_between(
   color='black', alpha=0.15
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([-1, 10])
+ax.set_xlim([12500,0])
+ax.set_ylim([-1,10])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_yticks(ticks=[0, 2.5, 5, 7.5, 10])
+ax.set_yticks(ticks=[0,2.5,5,7.5,10])
 ax.set_ylabel('OC Accumulation Rate (g OC/m2/yr)')
 ax.legend([])
 ax.grid(visible=False)
@@ -328,11 +328,11 @@ ax.plot(
   linewidth=1, linestyle='--', color='black', zorder=100
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([50, 0])
+ax.set_xlim([12500,0])
+ax.set_ylim([50,0])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_yticks(ticks=[0, 12.5, 25, 37.5, 50])
+ax.set_yticks(ticks=[0,12.5,25,37.5,50])
 ax.set_xlabel("")
 ax.set_ylabel('Chironomid Taxa % <10 C Optima')
 ax.yaxis.set_label_position("right")
@@ -347,11 +347,11 @@ ax.plot(
   color='black', linewidth=1
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([-30, -25])
+ax.set_xlim([12500,0])
+ax.set_ylim([-30,-25])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_yticks(ticks=[-25, -26.25, -27.5, -28.75, -30])
+ax.set_yticks(ticks=[-25,-26.25,-27.5,-28.75,-30])
 ax.set_xlabel("")
 ax.set_ylabel("Aggasiz Ice Core d18O (permil)")
 ax.grid(visible=False)
@@ -372,10 +372,10 @@ ax.plot(
   linewidth=1, linestyle='--', color='black', zorder=100
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([0, 16])
+ax.set_xlim([12500,0])
+ax.set_ylim([0,16])
 ax.set_xticks([])
-ax.set_yticks(ticks=[0, 4, 8, 12, 16])
+ax.set_yticks(ticks=[0,4,8,12,16])
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel('% C')
@@ -406,10 +406,10 @@ ax.plot(
   linewidth=1, linestyle='--', color='black', zorder=100
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([0, 600])
+ax.set_xlim([12500,0])
+ax.set_ylim([0,600])
 ax.set_xticks([])
-ax.set_yticks(ticks=[0, 200, 400, 600])
+ax.set_yticks(ticks=[0,200,400,600])
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel('Chironomid Head Capsuled per cc wet sed.')
@@ -432,12 +432,12 @@ ax.plot(
   linewidth=1, linestyle='--', color='black', zorder=100
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([8 ,16])
+ax.set_xlim([12500,0])
+ax.set_ylim([8 16])
 ax.set_xticks([])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_yticks(ticks=[8, 10, 12, 14, 16])
+ax.set_yticks(ticks=[8,10,12,14,16])
 ax.yaxis.set_label_position("right")
 ax.yaxis.set_ticks_position("right")
 ax.legend([])
@@ -459,11 +459,13 @@ ax.plot(
   linewidth=1, linestyle='--', color='black', zorder=100
 )
 
-ax.set_xlim([12500, 0])
-ax.set_ylim([0, 150])
-ax.set_xticks(ticks=[12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 2000, 1000, 0],
-              labels=[12000, "", 10000, "", 8000, "", 6000, "", 4000, "", 2000, "", 0])
-ax.set_yticks(ticks=[0, 50, 100, 150])
+ax.set_xlim([12500,0])
+ax.set_ylim([0,150])
+ax.set_xticks(
+  ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+  labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
+)
+ax.set_yticks(ticks=[0,50,100,150])
 ax.set_xlabel('Age (cal yr BP)')
 ax.legend([])
 ax.grid(visible=False)
