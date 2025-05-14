@@ -10,6 +10,7 @@
 ### Figure 1 ###
 ## (a) site map
 ## (b) 1991-2020 monthly average temperature and precipitation amount
+## (c) Photo of Lake CF8 and surrounding catchment
 
 
 ## See cf8_rpo_conda_env.yml
@@ -49,8 +50,8 @@ ax.set_extent([-85, -55, 59, 76], crs=ccrs.PlateCarree())
 
 plt.plot([-68.94968], [70.55818], '*', color='red', markeredgecolor='black', markersize=20, zorder=100, transform=ccrs.PlateCarree())
 
-figure1a = plt.gcf()
-# figure1a.savefig('cf8rpo_figure1a.svg')
+fig1a = plt.gcf()
+# fig1a.savefig('cf8rpo_fig1a_map.svg')
 
 
 ## ERA5 climatology data from Climate Reanalyzer (https://climatereanalyzer.org/research_tools/monthly_tseries/)
@@ -154,5 +155,5 @@ ax.set_ylim([0, 70])
 # fig.delaxes(axs[0, 1])
 # fig.delaxes(axs[1, 1])
 
-figure1b = plt.gcf()
-# figure1b.savefig('cf8rpo_figure1b.svg')
+fig1b = plt.gcf()
+# fig1b.savefig('cf8rpo_fig1b_clim.svg')
