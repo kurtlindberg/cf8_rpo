@@ -344,5 +344,5 @@ axs[0].grid(visible=False)
 axs[1].grid(visible=False)
 axs[2].grid(visible=False)
 
-figure3 = plt.gcf()
-# figure3.savefig('cf8rpo_figure3.svg')
+fig3 = plt.gcf()
+# fig3.savefig('cf8rpo_fig3_ocstack.svg')
