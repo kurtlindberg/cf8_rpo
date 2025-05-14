@@ -56,5 +56,5 @@ ax.set_xticks(
 ax.set_xlabel("Endmember/Mixture")
 ax.set_ylabel("d13C (%)")
 
-figures4_mixd13c = plt.gcf()
-# figures4_mixd13c.savefig('cf8rpo_figs4_mixd13c.svg')
+figs4_mixd13c = plt.gcf()
+# figs4_mixd13c.savefig('cf8rpo_figs4_mixd13c.svg')
