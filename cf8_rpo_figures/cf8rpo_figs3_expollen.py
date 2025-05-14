@@ -35,7 +35,7 @@ cf8_pollen_ens, cf8_pollen = cf8_fun.getlipd(
 
 
 ## Figure S3 script
-fig, ax = plt.subplots(1, 1)
+fig, ax = plt.subplots(1,1)
 
 cf8_pollen_ens.common_time(
   time_axis=cf8_pollen.ageMedian,
@@ -48,16 +48,16 @@ cf8_pollen_ens.common_time(
 )
 ax.plot(cf8_pollen.ageMedian, cf8_pollen.paleoData_values, linestyle='--', color='black', zorder=100)
 
-ax.set_xlim([12500, 0])
+ax.set_xlim([12500,0])
 ax.set_xticks(
-  ticks=[12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 2000, 1000, 0],
-  labels=[12000, "", 10000, "", 8000, "", 6000, "", 4000, "", 2000, "", 0]
+  ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+  labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
 )
-ax.set_ylim([0, 5])
+ax.set_ylim([0,5])
 ax.set_xlabel('Age (cal yr BP)')
 ax.set_ylabel('Exotic Pollen %')
 ax.legend([])
 ax.grid(visible=False)
 
-figures3 = plt.gcf()
-# figures3.savefig('cf8rpo_figures3.svg')
+figs3 = plt.gcf()
+# figs3.savefig('cf8rpo_figs3_expollen.svg')
