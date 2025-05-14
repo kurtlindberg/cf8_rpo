@@ -214,7 +214,7 @@ oc_acc_msd = ((rpo_dbd.paleoData_values-rpo_dbdstdev.paleoData_values)*(rpo_toc.
 
 
 ## Figure 3 a-c script
-fig, axs = plt.subplots(3, 1)
+fig, axs = plt.subplots(3,1)
 
 ## Figure 3a: RPO CO2 14C age offsets
 ax = axs[0]
@@ -243,11 +243,11 @@ ax.scatter(
   marker='x', s=100, color='black', edgecolors='black', linewidths=1.5, label='Bulk Avg.', zorder=1
 )
 ax.set_xticks([])
-ax.set_xlim([12500, 0])
-ax.set_ylim([-100, 2100])
-ax.set_yticks(ticks=[0, 500, 1000, 1500, 2000])
+ax.set_xlim([12500,0])
+ax.set_ylim([-100,2100])
+ax.set_yticks(ticks=[0,500,1000,1500,2000])
 ax.set_ylabel('RPO CO2 Age Offset (14C yrs)')
-ax.legend(loc='center left', bbox_to_anchor=(1, 0.6))
+ax.legend(loc='center left', bbox_to_anchor=(1,0.6))
 
 ## Figure 3b: MixSIAR endmember % contributions
 ax = axs[1]
@@ -264,13 +264,13 @@ ax.errorbar(
   fmt='o', capsize=5, ecolor='black', markeredgecolor='black', markerfacecolor='black', label='MIS 5'
 )
 ax.set_xticks([])
-ax.set_xlim([12500, 0])
-ax.set_ylim([-10, 100])
-ax.set_yticks(ticks=[0, 25, 50, 75, 100])
+ax.set_xlim([12500,0])
+ax.set_ylim([-10,100])
+ax.set_yticks(ticks=[0,25,50,75,100])
 ax.yaxis.set_label_position("right")
 ax.yaxis.set_ticks_position("right")
 ax.set_ylabel('MixSIAR % Contribution')
-# ax.legend(loc='center left', bbox_to_anchor=(1.05, 0.5))
+# ax.legend(loc='center left', bbox_to_anchor=(1.05,0.5))
 
 ## Figure 3c: Endmember OC accumulation rates
 ax = axs[2]
@@ -331,14 +331,16 @@ ax.fill_between(
   color='black', alpha=0.15
 )
 
-ax.set_xlim([12500, 0])
-ax.set_xticks(ticks=[12000, 11000, 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 2000, 1000, 0],
-              labels=[12000, "", 10000, "", 8000, "", 6000, "", 4000, "", 2000, "", 0])
+ax.set_xlim([12500,0])
+ax.set_xticks(
+  ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+  labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
+)
 ax.set_xlabel('Age (cal yr BP)')
-ax.set_ylim([-1, 26])
-ax.set_yticks(ticks=[0, 5, 10, 15, 20, 25])
+ax.set_ylim([-1,26])
+ax.set_yticks(ticks=[0,5,10,15,20,25])
 ax.set_ylabel('OC Accumulation Rate (g OC/m2/yr)')
-ax.legend(loc='center left', bbox_to_anchor=(1.05, 0.5))
+ax.legend(loc='center left', bbox_to_anchor=(1.05,0.5))
 
 axs[0].grid(visible=False)
 axs[1].grid(visible=False)
