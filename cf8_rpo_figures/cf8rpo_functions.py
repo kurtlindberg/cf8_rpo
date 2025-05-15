@@ -1,17 +1,16 @@
-## Lake CF8 RPO figure/data analysis functions
-
 # Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
 
-# Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
-# Gregory A. de Wet, Benjamin V. Gaglioti
+## Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
+## Gregory A. de Wet, Benjamin V. Gaglioti
 
-# DOI: pending
+## DOI: pending
 
-# Author: Kurt R. Lindberg
-# Last edited: 09/25/2024
+## Code Author: Kurt R. Lindberg
 
-## Import necessary packages
-import pandas as pd
+### Supporting functions for cf8_rpo_figures Python scripts ###
+
+
+## See cf8_rpo_conda_env.ymlimport pandas as pd
 import numpy as np
 import pyleoclim as pyleo
 from pylipd.lipd import LiPD
@@ -101,6 +100,7 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
 
     return ensemble
 
+
 ## Define function for importing LiPD data
 
 # filename = name of LiPD file
@@ -160,9 +160,29 @@ def getlipd(filename,
 
     return ensemble, age_axis
 
+
 ## Convert fraction modern values to uncalibrated 14C yrs
 def fm_to14c(fm):
     fm_arr = np.array(fm)
     to14c = -8033*np.log(fm_arr)
+
+    return to14c
+
+
+## Convert fraction modern values to delta 14C
+def fm_todel14c(fm, yc):
+    lam = 1/8267
+    fm_arr = np.array(fm)
+    todel14c = ((fm_arr * math.exp(lam*(1950-yc))) -1) * 1000
+
+    return todel14c
+
+
+## Convert delta 14C to uncalibrated 14C yrs
+def del14c_to14c(del14c, yc):
+    lam = 1/8267
+    del14c_arr = np.array(del14c)
+    tofm = ((del14c/1000)+1)/(math.exp(lam*(1950-yc)))
+    to14c = fm_to14c(tofm)
 
     return to14c
