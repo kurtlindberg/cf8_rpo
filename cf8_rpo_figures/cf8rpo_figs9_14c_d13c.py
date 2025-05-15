@@ -7,7 +7,7 @@
 
 ## Code Author: Kurt R. Lindberg
 
-### Figure S8 in Supporting Information S1 ###
+### Figure S9 in Supporting Information S1 ###
 ## (a) RPO CO2 14C ages
 ## (b) RPO CO2 d13C
 
@@ -120,10 +120,10 @@ cf8_noaa_soil = cf8_noaa_rpo[
 cf8soilage = np.array([-1000, -250])
 
 
-## Figure S8 script
+## Figure S9 script
 fig, axs = plt.subplots(2,1)
 
-## Figure S8a: RPO CO2 14C
+## Figure S9a: RPO CO2 14C
 ax = axs[0]
 ax.scatter(s1_fm.ageMedian, cf8_fun.fm_to14c(macro_fm), marker='s', s=30, color='black', edgecolor='black', linewidths=0.75, label='Macrofossil')
 ax.scatter(s1_fm.ageMedian, cf8_fun.fm_to14c(s1_fm.paleoData_values), marker='o', s=40, color='#2166ac', edgecolor='black', linewidths=0.75, label='Split 1')
@@ -151,7 +151,7 @@ ax.set_ylabel('Age (14C yrs)')
 # ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 ax.grid(visible=False)
 
-## Figure S8b: RPO CO2 d13C
+## Figure S9b: RPO CO2 d13C
 ax = axs[1]
 ax.scatter(s1_d13c.ageMedian, macro_d13c, marker='s', s=30, color='black', edgecolor='black', linewidths=0.75, label='Macrofossil')
 ax.scatter(s1_d13c.ageMedian, s1_d13c.paleoData_values, marker='o', s=40, color='#2166ac', edgecolor='black', linewidths=0.75, label='Split 1')
@@ -183,5 +183,5 @@ ax.set_xlabel('Age (cal byr BP)')
 ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 ax.grid(visible=False)
 
-figs8 = plt.gcf()
-# figs8.savefig('cf8rpo_figs8_14c_d13c.svg')
+figs9 = plt.gcf()
+# figs9.savefig('cf8rpo_figs9_14c_d13c.svg')
