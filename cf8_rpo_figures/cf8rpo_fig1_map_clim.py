@@ -148,6 +148,7 @@ ax.set_ylim([-35,10])
 # ax = axs[1,0]
 ax = axs[1]
 sns.pointplot(ax=ax, x=precip_plot.Month, y=(precip_plot.Precip*1000), color='blue', marker=None, linewidth=1.5)
+ax.hlines(y=0, xmin=0, xmax=20, linestyles='--', color='black)
 ax.set_xlabel("")
 ax.set_ylabel("Precip. (mm)")
 ax.set_yticks(ticks=[0,20,40,60])
