@@ -16,6 +16,9 @@ import pyleoclim as pyleo
 from pylipd.lipd import LiPD
 
 ## Create age ensemble mapping function for associated LiPD files
+# Function from PyleoTutorials: Working with Age Ensembles
+# by Alexander James and Deborah Khider
+# https://linked.earth/PyleoTutorials/notebooks/L1_working_with_age_ensembles.html
 def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoDepth,
                              value_name = None,value_unit = None,time_name = None,time_unit = None):
     """ Map the depth for the ensemble age values to the paleo values
@@ -108,7 +111,6 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
 # depth_name = column name of depth variable (for using depths in multiple paleoData tables)
 # val_unit = unit of the variable being imported
 # ens_num = index of paleo data table containing the imported variable
-
 def getlipd(filename,
             paleoData_variableName,
             depth_name,
@@ -156,7 +158,13 @@ def getlipd(filename,
         time_unit=time_unit
     )
 
-    age_axis = pd.DataFrame({'depth':paleoDepth, 'ageMedian':paleoAgeMedian, 'paleoData_values':paleoValues})
+    age_axis = pd.DataFrame(
+      {
+        'depth':paleoDepth,
+        'ageMedian':paleoAgeMedian,
+        'paleoData_values':paleoValues
+      }
+    )
 
     return ensemble, age_axis
 
