@@ -1,8 +1,8 @@
 # cf8_rpo
 
 Code and data for analysis and visualizations from Lindberg et al. (in revision); submitted to Journal of Geophysical Research: Biogeosciences.
-- cf8_rpo_figures: Scripts and associated data files for producing figures from the manuscript (Figures 1-5, Supplemental Figures S1-S12)
-- cf9_rpo_mixsiar: Scripts, input files, and output results from MixSIAR mixing model runs (Stock et al., 2018) 
+- **cf8_rpo_figures**: Scripts and associated data files for producing figures from the manuscript (Figures 1-5, Supplemental Figures S1-S12)
+- **cf8_rpo_mixsiar**: Scripts, input files, and output results from MixSIAR mixing model runs (Stock et al., 2018) 
 
 **Manuscript title:** Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
 
