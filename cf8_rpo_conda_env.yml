@@ -6,7 +6,9 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
+  - astroid=3.3.8=py311h06a4308_0
   - asttokens=3.0.0=py311h06a4308_0
+  - autopep8=2.0.4=pyhd3eb1b0_0
   - blas=1.0=mkl
   - bottleneck=1.4.2=py311hf4808d0_0
   - brotli-python=1.0.9=py311h6a678d5_9
@@ -19,17 +21,21 @@ dependencies:
   - cyrus-sasl=2.1.28=h52b45da_1
   - debugpy=1.8.11=py311h6a678d5_0
   - decorator=5.1.1=pyhd3eb1b0_0
+  - docstring-to-markdown=0.11=py311h06a4308_0
   - et_xmlfile=1.1.0=py311h06a4308_0
   - executing=0.8.3=pyhd3eb1b0_0
   - expat=2.7.1=h6a678d5_0
+  - flake8=7.1.1=py311h06a4308_0
   - fontconfig=2.14.1=h55d465d_3
   - fonttools=4.55.3=py311h5eee18b_0
   - freetype=2.13.3=h4a9f257_0
   - icu=73.1=h6a678d5_0
+  - importlib-metadata=8.5.0=py311h06a4308_0
   - intel-openmp=2023.1.0=hdb19cb5_46306
   - ipykernel=6.29.5=py311h06a4308_1
   - ipython=9.1.0=py311h06a4308_0
   - ipython_pygments_lexers=1.1.1=py311h06a4308_0
+  - isort=6.0.1=py311h06a4308_0
   - jedi=0.19.2=py311h06a4308_0
   - joblib=1.4.2=py311h06a4308_0
   - jpeg=9e=h5eee18b_3
@@ -70,6 +76,7 @@ dependencies:
   - matplotlib=3.10.0=py311h06a4308_0
   - matplotlib-base=3.10.0=py311hbfdbfaf_0
   - matplotlib-inline=0.1.6=py311h06a4308_0
+  - mccabe=0.7.0=pyhd3eb1b0_0
   - mkl=2023.1.0=h213fc3f_46344
   - mkl-service=2.4.0=py311h5eee18b_2
   - mkl_fft=1.3.11=py311h5eee18b_0
@@ -89,19 +96,27 @@ dependencies:
   - pillow=11.1.0=py311hac6e08b_1
   - pip=25.1=pyhc872135_2
   - platformdirs=4.3.7=py311h06a4308_0
+  - pluggy=1.5.0=py311h06a4308_0
   - prompt-toolkit=3.0.43=py311h06a4308_0
   - prompt_toolkit=3.0.43=hd3eb1b0_0
   - psutil=5.9.0=py311h5eee18b_1
   - pthread-stubs=0.3=h0ce48e5_1
   - ptyprocess=0.7.0=pyhd3eb1b0_2
   - pure_eval=0.2.2=pyhd3eb1b0_0
+  - pycodestyle=2.12.1=py311h06a4308_0
+  - pydocstyle=6.3.0=py311h06a4308_0
+  - pyflakes=3.2.0=py311h06a4308_0
   - pygments=2.19.1=py311h06a4308_0
+  - pylint=3.3.5=py311h06a4308_0
   - pyparsing=3.2.0=py311h06a4308_0
   - pyqt=6.7.1=py311h6a678d5_1
   - pyqt6-sip=13.9.1=py311h5eee18b_1
   - python=3.11.11=he870216_0
   - python-dateutil=2.9.0post0=py311h06a4308_2
+  - python-lsp-jsonrpc=1.1.2=pyhd3eb1b0_0
+  - python-lsp-server=1.12.2=py311he3bba80_0
   - python-tzdata=2025.2=pyhd3eb1b0_0
+  - pytoolconfig=1.2.6=py311h06a4308_0
   - pytz=2024.1=py311h06a4308_0
   - pyzmq=26.2.0=py311h6a678d5_0
   - qtbase=6.7.3=hdaa5aa8_0
@@ -111,22 +126,28 @@ dependencies:
   - qtwebchannel=6.7.3=h6a678d5_0
   - qtwebsockets=6.7.3=h6a678d5_0
   - readline=8.2=h5eee18b_0
+  - rope=1.13.0=py311h06a4308_0
   - scikit-learn=1.6.1=py311h6a678d5_0
   - scipy=1.15.3=py311h525edd1_0
   - setuptools=72.1.0=py311h06a4308_0
   - sip=6.10.0=py311h6a678d5_0
   - six=1.17.0=py311h06a4308_0
+  - snowballstemmer=2.2.0=pyhd3eb1b0_0
   - sqlite=3.45.3=h5eee18b_0
   - stack_data=0.2.0=pyhd3eb1b0_0
   - tbb=2021.8.0=hdb19cb5_0
   - threadpoolctl=3.5.0=py311h92b7b1e_0
   - tk=8.6.14=h39e8969_0
+  - tomli=2.0.1=py311h06a4308_0
+  - tomlkit=0.13.2=py311h06a4308_0
   - tornado=6.4.2=py311h5eee18b_0
   - traitlets=5.14.3=py311h06a4308_0
   - typing_extensions=4.12.2=py311h06a4308_0
   - tzdata=2025b=h04d1e81_0
+  - ujson=5.10.0=py311h6a678d5_1
   - unicodedata2=15.1.0=py311h5eee18b_1
   - wcwidth=0.2.5=pyhd3eb1b0_0
+  - whatthepatch=1.0.2=py311h06a4308_0
   - wheel=0.45.1=py311h06a4308_0
   - xcb-util=0.4.1=h5eee18b_2
   - xcb-util-cursor=0.1.5=h5eee18b_0
@@ -138,7 +159,9 @@ dependencies:
   - xorg-libxdmcp=1.1.5=h9b100fa_0
   - xorg-xorgproto=2024.1=h5eee18b_1
   - xz=5.6.4=h5eee18b_1
+  - yapf=0.40.2=py311h06a4308_0
   - zeromq=4.3.5=h6a678d5_0
+  - zipp=3.21.0=py311h06a4308_0
   - zlib=1.2.13=h5eee18b_1
   - zstd=1.5.6=hc292b87_0
   - pip:
