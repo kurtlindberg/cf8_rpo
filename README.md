@@ -6,8 +6,8 @@ Code and data for analysis and visualizations from Lindberg et al. (in revision)
 - **cf8_rpo_mixsiar**: Scripts, input files, and output results from MixSIAR mixing model runs (Stock et al., 2018). 
 
 **Data availability**: 
-- Lindberg_CF8_RPO_biogeochem.xlsx: Excel spreadsheet available on the NOAA Paleoclimate database (DOI: https://doi.org/10.25921/pzpk-bx34). Data is also available on the NSF Arctic Data Center (DOI: https://doi.org/10.18739/A2HQ3S13M).
-- Lindberg.CF8.2024.lpd: LiPD (Linked Paleo Data) file format of the data produced in this study (McKay & Emile-Geay, 2016).
+- **Lindberg_CF8_RPO_biogeochem.xlsx**: Excel spreadsheet available on the NOAA Paleoclimate database (DOI: https://doi.org/10.25921/pzpk-bx34). Data is also available on the NSF Arctic Data Center (DOI: https://doi.org/10.18739/A2HQ3S13M).
+- **Lindberg.CF8.2024.lpd**: LiPD (Linked Paleo Data; McKay & Emile-Geay, 2016) file format of the data produced in this study.
 
 ## References
 McKay, N. P., & Emile-Geay, J. (2016). The Linked Paleo Data framework–a common tongue for paleoclimatology. Climate of the Past, 12(4), 1093-1100.
