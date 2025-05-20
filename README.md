@@ -5,7 +5,7 @@ Code and data for analysis and visualizations from Lindberg et al. (in revision)
 - **cf8_rpo_figures**: Scripts and associated data files for producing figures from the manuscript (Figures 1-5, Supplemental Figures S1-S12).
 - **cf8_rpo_mixsiar**: Scripts, input files, and output results from MixSIAR mixing model runs (Stock et al., 2018). 
 
-**Data availability**: 
+## Data Availability
 - **Lindberg_CF8_RPO_biogeochem.xlsx**: Excel spreadsheet available on the NOAA Paleoclimate database (DOI: https://doi.org/10.25921/pzpk-bx34). Data is also available on the NSF Arctic Data Center (DOI: https://doi.org/10.18739/A2HQ3S13M).
 - **Lindberg.CF8.2024.lpd**: LiPD (Linked Paleo Data; McKay & Emile-Geay, 2016) file format of the data produced in this study.
 
