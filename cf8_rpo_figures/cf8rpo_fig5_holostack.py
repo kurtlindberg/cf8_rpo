@@ -282,7 +282,7 @@ ax.fill_between(
   mix_post.ageMedian,
   (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
   (oc_acc_psd*(mix_post.paleoData_values+mix_poststdev.paleoData_values)),
-  color='orange', alpha=0.15
+  color='orange', alpha=0.15, linewidth=0
 )
 ax.plot(
   mix_mis5.ageMedian, (oc_acc_mean*mix_mis5.paleoData_values),
@@ -300,7 +300,7 @@ ax.fill_between(
   mix_mis5.ageMedian,
   (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
   (oc_acc_psd*(mix_mis5.paleoData_values+mix_mis5stdev.paleoData_values)),
-  color='black', alpha=0.15
+  color='black', alpha=0.15, linewidth=0
 )
 
 ax.set_xlim([12500,0])

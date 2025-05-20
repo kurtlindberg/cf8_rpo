@@ -43,17 +43,17 @@ colors = [
 fig, axs = plt.subplots(1,1)
 
 ax = axs
-ax.scatter(np.full(shape=len(aq.d13c), fill_value=1), aq.d13c, marker='o', s=50, color='blue', edgecolors='black', linewidths=0.75)
-ax.scatter(np.full(shape=len(pg.d13c), fill_value=2), pg.d13c, marker='o', s=50, color='orange', edgecolors='black', linewidths=0.75)
-ax.scatter(np.full(shape=len(mis5.d13c), fill_value=3), mis5.d13c, marker='o', s=50, color='grey', edgecolors='black', linewidths=0.75)
-ax.scatter(np.full(shape=len(mix.d13c), fill_value=4), mix.d13c, marker='o', s=50, color='white', edgecolors='black', linewidths=0.75)
+ax.scatter(np.full(shape=len(aq.d13c), fill_value=4), aq.d13c, marker='o', s=50, color='blue', edgecolors='black', linewidths=0.75)
+ax.scatter(np.full(shape=len(pg.d13c), fill_value=3), pg.d13c, marker='o', s=50, color='orange', edgecolors='black', linewidths=0.75)
+ax.scatter(np.full(shape=len(mis5.d13c), fill_value=2), mis5.d13c, marker='o', s=50, color='grey', edgecolors='black', linewidths=0.75)
+ax.scatter(np.full(shape=len(mix.d13c), fill_value=1), mix.d13c, marker='o', s=50, color='white', edgecolors='black', linewidths=0.75)
 ax.set_xlim([0,5])
 ax.set_ylim([-40,-5])
 ax.set_xticks(
   ticks=[1,2,3,4],
-  labels=['Aquatic','Postglacial','MIS 5','CF8 Sediment (Mix)']
+  labels=['Lake Sediment', 'MIS 5 Soil', 'Postglacial Soil', 'Aquatic Biomass']
 )
-ax.set_xlabel("Endmember/Mixture")
+ax.set_xlabel("")
 ax.set_ylabel("d13C (%)")
 
 figs4_mixd13c = plt.gcf()
