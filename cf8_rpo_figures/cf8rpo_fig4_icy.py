@@ -149,7 +149,7 @@ for i in range(0, np.shape(fm_bulk)[0]):
 
 ## Figure 4 a-b script
 
-fig5_colors = [
+fig4_colors = [
   '#00441b',
   '#1b7837',
   '#5aae61',
@@ -169,12 +169,12 @@ for i in range(0, np.shape(icy)[0]):
     icy_yint[i] = modela.intercept_
     ax.plot(
       icy[i,:], (icy[i,:]*modela.coef_+modela.intercept_),
-      linestyle='--', color=fig5_colors[i], zorder=1
+      linestyle='--', dashes=(3,1), linewidth=1.5, color=fig4_colors[i], zorder=1
     )
     ax.scatter(
       icy[i,:], cf8_fun.fm_todel14c(fm_arr[i,:], yc=2021),
-      marker='o', s=40, color=fig5_colors[i], edgecolors='black', zorder=2,
-              label=str(rpo_depth.paleoData_values[i])
+      marker='o', s=40, color=fig4_colors[i], edgecolors='black', zorder=2,
+      label=str(rpo_depth.paleoData_values[i])
     )
 
 ax.set_xlim([0.005,0.065])
@@ -182,42 +182,46 @@ ax.set_ylim([-850,-150])
 ax.xaxis.set_label_position("top")
 ax.xaxis.set_ticks_position("top")
 ax.set_xlabel('Inverse Cumulative Yield (umol-1)')
-ax.set_ylabel('RPO CO2 Age (14C yrs)')
+ax.set_ylabel('RPO CO2 d14C')
 ax.set_xticks(ticks=[0.01,0.02,0.03,0.04,0.05,0.06])
 ax.set_yticks(ticks=[-800,-600,-400,-200])
-# ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
+ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 
 ## Figure 4b: Inverse cummulative yield y-intercept vs. bulk 14C
 ax = axs[1,0]
 modelb = LinearRegression().fit(cf8_fun.fm_todel14c(fm_bulk, yc=2021).reshape((-1,1)), icy_yint)
 bulk_corr = np.array(scipy.stats.pearsonr(cf8_fun.fm_todel14c(fm_bulk, yc=2021), icy_yint))
-print("R = " + str(bulk_corr[0]) + "; p = " + str(bulk_corr[1]))
 ax.plot(
   cf8_fun.fm_todel14c(fm_bulk, yc=2021), (cf8_fun.fm_todel14c(fm_bulk, yc=2021)*modelb.coef_+modelb.intercept_),
-  linestyle='--', color='black', zorder=1
+  linestyle='--', dashes=(3,1), linewidth=1.5, color='black', zorder=1
 )
-ax.scatter(
-  cf8_fun.fm_todel14c(fm_bulk, yc=2021), icy_yint,
-  marker='o', s=40, edgecolors='black', zorder=2,
-  label="R = " + str(np.round(bulk_corr[0], decimals=3)) + "; p < 0.001"
-)
+for j in range(0, np.shape(icy)[0]):
+  ax.scatter(
+    cf8_fun.fm_todel14c(fm_bulk[j], yc=2021), icy_yint[j],
+    marker='o', s=40, color=fig4_colors[j], edgecolors='black', zorder=2
+  )
 
 ax.set_xlim([-850,-150])
 ax.set_ylim([-850,-150])
-ax.set_xlabel('Bulk RPO Age (14C yrs)')
-ax.set_ylabel('Inverse Cumulative Yield Y-Intercept')
+ax.set_xlabel('RPO CO2 d14C')
+ax.set_ylabel('Inverse Cumulative Yield Y-Intercept d14C')
 ax.set_xticks(ticks=[-800,-600,-400,-200])
 ax.set_yticks(ticks=[-800,-600,-400,-200])
 ax.legend(loc='upper left')
 
 axs[0,0].grid(visible=False)
-axs[0,1].grid(visible=False)
+axs[1,0].grid(visible=False)
 fig.delaxes(axs[0,1])
 fig.delaxes(axs[1,1])
 
-print(modelb.coef_)
-print(modelb.intercept_)
-print(bulk_corr)
+print("y = " + str(np.round(modelb.coef_, decimals=2)) + "x" + str(np.round(modelb.intercept_, decimals=2)))
+print("R = " + str(np.round(bulk_corr[0], decimals=2)) + "; p = " + str(np.round(bulk_corr[1], decimals=3)))
+print(
+  cf8_fun.del14c_to14c(-200, yc=2021),
+  cf8_fun.del14c_to14c(-400, yc=2021),
+  cf8_fun.del14c_to14c(-600, yc=2021),
+  cf8_fun.del14c_to14c(-800, yc=2021)
+)
 
 fig4 = plt.gcf()
 # fig4.savefig('cf8rpo_fig4_icy.svg')
