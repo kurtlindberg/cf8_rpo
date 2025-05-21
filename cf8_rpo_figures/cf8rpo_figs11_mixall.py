@@ -43,7 +43,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel('MixSIAR % Contribution')
@@ -61,7 +64,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel("")
@@ -79,7 +85,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel("")
@@ -95,7 +104,10 @@ sns.boxplot(
 sns.boxplot(ax=ax, x=mixsiar_all.m4_split, y=(mixsiar_all.m4)*100, hue=mixsiar_all.m4_end,
             showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"})
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel("")
@@ -113,7 +125,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel("")
@@ -131,7 +146,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel("")
@@ -149,7 +167,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 # ax.set_xticklabels("")
 ax.set_xlabel('RPO CO2 Split')
 ax.set_ylabel("")
@@ -167,7 +188,10 @@ sns.boxplot(
   showmeans=True, meanprops={"marker":"o","markerfacecolor":"black","markeredgecolor":"black","markersize":"2.5"}
 )
 ax.set_ylim([-5,100])
-ax.set_yticks(ticks=[0,25,50,75,100])
+ax.set_yticks(
+  ticks=[0,25,50,75,100],
+  labels=[0,"",50,"",100]
+)
 # ax.set_xticklabels("")
 ax.set_xlabel('RPO CO2 Split')
 ax.set_ylabel("")
