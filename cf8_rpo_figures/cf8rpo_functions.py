@@ -10,7 +10,7 @@
 ### Supporting functions for cf8_rpo_figures Python scripts ###
 
 
-## See cf8_rpo_conda_env.ymlimport pandas as pd
+## See cf8_rpo_conda_env.yml
 import math
 import pandas as pd
 import numpy as np
