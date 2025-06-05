@@ -1,19 +1,19 @@
-## Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
+# Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
 
-## Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
-## Gregory A. de Wet, Benjamin V. Gaglioti
+# Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
+# Gregory A. de Wet, Benjamin V. Gaglioti
 
-## DOI: pending
+# DOI: pending
 
-## Code Author: Kurt R. Lindberg
+# Code Author: Kurt R. Lindberg
 
-### Figure 1 ###
-## (a) site map
-## (b) 1991-2020 monthly average temperature and precipitation amount
-## (c) Photo of Lake CF8 and surrounding catchment
+# Figure 1
+# (a) site map
+# (b) 1991-2020 monthly average temperature and precipitation amount
+# (c) Photo of Lake CF8 and surrounding catchment
 
 
-## See cf8_rpo_conda_env.yml
+# See cf8_rpo_conda_env.yml
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -24,13 +24,13 @@ import cartopy.feature as cfeature
 from cartopy import config
 
 
-## Figure parameters for editing in Inkscape
+# Figure parameters for editing in Inkscape
 plt.rcParams['svg.fonttype'] = 'none'
 plt.rcParams['font.size'] = 10
 plt.rcParams['font.family'] = "Liberation Sans"
 
 
-## Define cartopy features
+# Define cartopy features
 projLcc = ccrs.LambertConformal(central_longitude=-70, central_latitude=60)
 resol = '50m'
 land = cfeature.NaturalEarthFeature('physical', 'land', scale=resol, edgecolor='black')
@@ -38,7 +38,7 @@ border = cfeature.NaturalEarthFeature(category='cultural', name='admin_0_boundar
 ocean = cfeature.NaturalEarthFeature('physical', 'ocean', scale=resol, edgecolor='none', facecolor=cfeature.COLORS['water'])
 lakes = cfeature.NaturalEarthFeature('physical', 'lakes', scale=resol, edgecolor='none', facecolor=cfeature.COLORS['water'])
 
-## Apply cartopy features to Figure 1a
+# Apply cartopy features to Figure 1a
 ax = plt.axes(projection=projLcc)
 # ax.coastlines(resolution=resol, color='black', zorder=10)
 gl = ax.gridlines(draw_labels=False, linewidth=1, color='black', alpha=0.5, linestyle='--', zorder=200)
@@ -58,12 +58,12 @@ fig1a = plt.gcf()
 # fig1a.savefig('cf8rpo_fig1a_map.svg')
 
 
-## ERA5 climatology data from Climate Reanalyzer (https://climatereanalyzer.org/research_tools/monthly_tseries/)
-## ERA5 DOI: https://doi.org/10.1002/qj.3803
+# ERA5 climatology data from Climate Reanalyzer (https://climatereanalyzer.org/research_tools/monthly_tseries/)
+# ERA5 DOI: https://doi.org/10.1002/qj.3803
 tempc = pd.read_csv('CF8_ClimRean_temp_all.csv', header=8)
 precipmm = pd.read_csv('CF8_ClimRean_precip_all.csv', header=8)
 
-## Filter and reformat climate data for plotting with seaborn
+# Filter and reformat climate data for plotting with seaborn
 tempc = tempc[(tempc['Year'] > 1990) & (tempc['Year'] <= 2020)]
 temp_plot = pd.concat(
     [
@@ -137,7 +137,7 @@ precip_plot.insert(
 )
 
 
-## Figure 1b script
+# Figure 1b script
 fig, axs = plt.subplots(2,1)
 
 # ax = axs[0,0]
