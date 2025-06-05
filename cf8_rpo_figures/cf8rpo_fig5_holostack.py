@@ -270,7 +270,8 @@ fig, axs = plt.subplots(4,1)
 ax = axs[0]
 ax.plot(
     mix_post.ageMedian, (oc_acc_mean*mix_post.paleoData_values),
-    color='orange', linestyle='-', linewidth=1, marker='o', markersize=4, label='Postglacial'
+    color='orange', linestyle='-', linewidth=1, marker='o', markersize=4,
+    label='Postglacial'
 )
 ax.plot(
     mix_post.ageMedian, (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
@@ -288,7 +289,8 @@ ax.fill_between(
 )
 ax.plot(
     mix_mis5.ageMedian, (oc_acc_mean*mix_mis5.paleoData_values),
-    color='black', linestyle='-', linewidth=1, marker='o', markersize=4, label='MIS 5'
+    color='black', linestyle='-', linewidth=1, marker='o', markersize=4,
+    label='MIS 5'
 )
 ax.plot(
     mix_mis5.ageMedian, (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
@@ -327,7 +329,8 @@ cf8_chir_lt10_ens.common_time(
 )
 ax.plot(
     cf8_chir_lt10.ageMedian, cf8_chir_lt10.paleoData_values,
-    linewidth=1, linestyle='--', color='black', zorder=100
+    linewidth=1, linestyle='--', color='black',
+    zorder=100
 )
 
 ax.set_xlim([12500,0])
@@ -371,7 +374,8 @@ ea_totalc_ens.common_time(
 )
 ax.plot(
     ea_totalc.ageMedian, ea_totalc.paleoData_values,
-    linewidth=1, linestyle='--', color='black', zorder=100
+    linewidth=1, linestyle='--', color='black',
+    zorder=100
 )
 
 ax.set_xlim([12500,0])
@@ -406,7 +410,8 @@ cf8_chir_headcount_ens.common_time(
 )
 ax.plot(
   cf8_chir_headcount.ageMedian, cf8_chir_headcount.paleoData_values,
-  linewidth=1, linestyle='--', color='black', zorder=100
+  linewidth=1, linestyle='--', color='black',
+    zorder=100
 )
 
 ax.set_xlim([12500,0])
@@ -432,7 +437,8 @@ ea_cn_ens.common_time(
 )
 ax.plot(
     ea_cn.ageMedian, ea_cn.paleoData_values,
-    linewidth=1, linestyle='--', color='black', zorder=100
+    linewidth=1, linestyle='--', color='black',
+    zorder=100
 )
 
 ax.set_xlim([12500,0])
@@ -459,7 +465,8 @@ ms_ens.common_time(
 )
 ax.plot(
     ms.ageMedian, ms.paleoData_values,
-    linewidth=1, linestyle='--', color='black', zorder=100
+    linewidth=1, linestyle='--', color='black',
+    zorder=100
 )
 
 ax.set_xlim([12500,0])
