@@ -221,27 +221,33 @@ fig, axs = plt.subplots(3,1)
 ax = axs[0]
 ax.scatter(
     s1_fm.ageMedian, (cf8_fun.fm_to14c(s1_fm.paleoData_values)-cf8_fun.fm_to14c(macro_fm)),
-    marker='o', s=40, color='#2166ac', edgecolors='black', linewidths=0.75, label='Split 1', zorder=2
+    marker='o', s=40, color='#2166ac', edgecolors='black', linewidths=0.75,
+    label='Split 1', zorder=2
 )
 ax.scatter(
     s2_fm.ageMedian, (cf8_fun.fm_to14c(s2_fm.paleoData_values)-cf8_fun.fm_to14c(macro_fm)),
-    marker='o', s=40, color='#67a9cf', edgecolors='black', linewidths=0.75, label='Split 2', zorder=2
+    marker='o', s=40, color='#67a9cf', edgecolors='black', linewidths=0.75,
+    label='Split 2', zorder=2
 )
 ax.scatter(
     s3_fm.ageMedian, (cf8_fun.fm_to14c(s3_fm.paleoData_values)-cf8_fun.fm_to14c(macro_fm)),
-    marker='o', s=40, color='#fddbc7', edgecolors='black', linewidths=0.75, label='Split 3', zorder=2
+    marker='o', s=40, color='#fddbc7', edgecolors='black', linewidths=0.75,
+    label='Split 3', zorder=2
 )
 ax.scatter(
     s4_fm.ageMedian, (cf8_fun.fm_to14c(s4_fm.paleoData_values)-cf8_fun.fm_to14c(macro_fm)),
-    marker='o', s=40, color='#ef8a62', edgecolors='black', linewidths=0.75, label='Split 4', zorder=2
+    marker='o', s=40, color='#ef8a62', edgecolors='black', linewidths=0.75,
+    label='Split 4', zorder=2
 )
 ax.scatter(
     s5_fm.ageMedian, (cf8_fun.fm_to14c(s5_fm.paleoData_values)-cf8_fun.fm_to14c(macro_fm)),
-    marker='o', s=40, color='#b2182b', edgecolors='black', linewidths=0.75, label='Split 5', zorder=2
+    marker='o', s=40, color='#b2182b', edgecolors='black', linewidths=0.75,
+    label='Split 5', zorder=2
 )
 ax.scatter(
     s1_fm.ageMedian, (cf8_fun.fm_to14c(fm_bulk)-cf8_fun.fm_to14c(macro_fm)),
-    marker='x', s=100, color='black', edgecolors='black', linewidths=1.5, label='Bulk Avg.', zorder=1
+    marker='x', s=100, color='black', edgecolors='black', linewidths=1.5,
+    label='Bulk Avg.', zorder=1
 )
 ax.set_xticks([])
 ax.set_xlim([12500,0])
@@ -254,15 +260,18 @@ ax.legend(loc='center left', bbox_to_anchor=(1,0.6))
 ax = axs[1]
 ax.errorbar(
     mix_aqua.ageMedian, mix_aqua.paleoData_values*100, yerr=mix_aquastdev.paleoData_values*100,
-    fmt='o', capsize=5, ecolor='blue', markeredgecolor='blue', markerfacecolor='blue', label='Aquatic'
+    fmt='o', capsize=5, ecolor='blue', markeredgecolor='blue', markerfacecolor='blue',
+    label='Aquatic'
 )
 ax.errorbar(
     mix_post.ageMedian, mix_post.paleoData_values*100, yerr=mix_poststdev.paleoData_values*100,
-    fmt='o', capsize=5, ecolor='orange', markeredgecolor='orange', markerfacecolor='orange', label='Postglacial'
+    fmt='o', capsize=5, ecolor='orange', markeredgecolor='orange', markerfacecolor='orange',
+    label='Postglacial'
 )
 ax.errorbar(
     mix_mis5.ageMedian, mix_mis5.paleoData_values*100, yerr=mix_mis5stdev.paleoData_values*100,
-    fmt='o', capsize=5, ecolor='black', markeredgecolor='black', markerfacecolor='black', label='MIS 5'
+    fmt='o', capsize=5, ecolor='black', markeredgecolor='black', markerfacecolor='black',
+    label='MIS 5'
 )
 ax.set_xticks([])
 ax.set_xlim([12500,0])
@@ -277,7 +286,8 @@ ax.set_ylabel('MixSIAR % Contribution')
 ax = axs[2]
 ax.plot(
     mix_aqua.ageMedian, (oc_acc_mean*mix_aqua.paleoData_values),
-    color='blue', linestyle='-', linewidth=1, marker='o', markersize=4, label='Aquatic'
+    color='blue', linestyle='-', linewidth=1, marker='o', markersize=4,
+    label='Aquatic'
 )
 ax.plot(
     mix_aqua.ageMedian, (oc_acc_msd*(mix_aqua.paleoData_values-mix_aquastdev.paleoData_values)),
@@ -296,7 +306,8 @@ ax.fill_between(
 
 ax.plot(
     mix_post.ageMedian, (oc_acc_mean*mix_post.paleoData_values),
-    color='orange', linestyle='-', linewidth=1, marker='o', markersize=4, label='Postglacial'
+    color='orange', linestyle='-', linewidth=1, marker='o', markersize=4,
+    label='Postglacial'
 )
 ax.plot(
     mix_post.ageMedian, (oc_acc_msd*(mix_post.paleoData_values-mix_poststdev.paleoData_values)),
@@ -315,7 +326,8 @@ ax.fill_between(
 
 ax.plot(
     mix_mis5.ageMedian, (oc_acc_mean*mix_mis5.paleoData_values),
-    color='black', linestyle='-', linewidth=1, marker='o', markersize=4, label='MIS 5'
+    color='black', linestyle='-', linewidth=1, marker='o', markersize=4,
+    label='MIS 5'
 )
 ax.plot(
     mix_mis5.ageMedian, (oc_acc_msd*(mix_mis5.paleoData_values-mix_mis5stdev.paleoData_values)),
