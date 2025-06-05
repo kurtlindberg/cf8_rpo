@@ -169,12 +169,13 @@ for i in range(0, np.shape(icy)[0]):
     icy_yint[i] = modela.intercept_
     ax.plot(
         icy[i,:], (icy[i,:]*modela.coef_+modela.intercept_),
-        linestyle='--', dashes=(3,1), linewidth=1.5, color=fig4_colors[i], zorder=1
+        linestyle='--', dashes=(3,1), linewidth=1.5, color=fig4_colors[i],
+        zorder=1
     )
     ax.scatter(
         icy[i,:], cf8_fun.fm_todel14c(fm_arr[i,:], yc=2021),
-        marker='o', s=40, color=fig4_colors[i], edgecolors='black', zorder=2,
-        label=str(rpo_depth.paleoData_values[i])
+        marker='o', s=40, color=fig4_colors[i], edgecolors='black',
+        zorder=2, label=str(rpo_depth.paleoData_values[i])
     )
 
 ax.set_xlim([0.005,0.065])
@@ -193,12 +194,14 @@ modelb = LinearRegression().fit(cf8_fun.fm_todel14c(fm_bulk, yc=2021).reshape((-
 bulk_corr = np.array(scipy.stats.pearsonr(cf8_fun.fm_todel14c(fm_bulk, yc=2021), icy_yint))
 ax.plot(
     cf8_fun.fm_todel14c(fm_bulk, yc=2021), (cf8_fun.fm_todel14c(fm_bulk, yc=2021)*modelb.coef_+modelb.intercept_),
-    linestyle='--', dashes=(3,1), linewidth=1.5, color='black', zorder=1
+    linestyle='--', dashes=(3,1), linewidth=1.5, color='black',
+    zorder=1
 )
 for j in range(0, np.shape(icy)[0]):
     ax.scatter(
         cf8_fun.fm_todel14c(fm_bulk[j], yc=2021), icy_yint[j],
-        marker='o', s=40, color=fig4_colors[j], edgecolors='black', zorder=2
+        marker='o', s=40, color=fig4_colors[j], edgecolors='black',
+        zorder=2
     )
 
 ax.set_xlim([-850,-150])
