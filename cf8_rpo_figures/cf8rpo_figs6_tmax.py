@@ -23,7 +23,7 @@ plt.rcParams['font.family'] = "Liberation Sans"
 
 # Import data from NOAA paleoclimate datasheet
 cf8_noaa_rpo = pd.read_excel(
-    "Lindberg_2024_CF8_NOAA_paleoclimate.xlsm",
+    "Lindberg_CF8_RPO_biogeochem.xlsm",
     sheet_name="RPO_Data",
     header=48
 )
