@@ -59,8 +59,16 @@ fig, axs = plt.subplots(1,4)
 
 # Figure S1b: RPO and EA subsampling depths
 ax = axs[0]
-ax.scatter(rpo_pos, rpo_depth.depth, marker='o', color='gray', edgecolors='black', linewidth=0.75, label='RPO')
-ax.scatter(ea_pos, ea_depth.depth, marker='d', color='gray', edgecolors='black', linewidth=0.75, label='EA')
+ax.scatter(
+    rpo_pos, rpo_depth.depth,
+    marker='o', color='gray', edgecolors='black', linewidth=0.75,
+    label='RPO'
+)
+ax.scatter(
+    ea_pos, ea_depth.depth,
+    marker='d', color='gray', edgecolors='black', linewidth=0.75,
+    label='EA'
+)
 
 ax.set_xlim([0,5])
 ax.set_xticks([])
@@ -73,7 +81,10 @@ ax.grid(visible=False)
 
 # Figure S1c: Magnetic susceptibility
 ax = axs[1]
-ax.plot(ms.paleoData_values, ms.depth, color='black', linewidth=0.75)
+ax.plot(
+    ms.paleoData_values, ms.depth,
+    color='black', linewidth=0.75
+)
 
 ax.set_ylim([112,0])
 ax.set_xlim([-5,150])
