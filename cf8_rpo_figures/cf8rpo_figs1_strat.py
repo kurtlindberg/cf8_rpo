@@ -7,7 +7,7 @@
 
 # Code Author: Kurt R. Lindberg
 
-# Figure S1 in Supporting Information S1 ###
+# Figure S1 in Supporting Information S1
 # (a) CF817-03 sediment core image
 # (b) RPO and EA subsampling depths
 # (c) Magnetic susceptibility
