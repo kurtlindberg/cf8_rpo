@@ -29,8 +29,8 @@ import cf8rpo_functions as cf8_fun
 
 ## Figure parameters for editing in Inkscape
 plt.rcParams['svg.fonttype'] = 'none'
-plt.rcParams['font.size'] = 12
-plt.rcParams['font.family'] = "sans-serif"
+plt.rcParams['font.size'] = 10
+plt.rcParams['font.family'] = "Liberation Sans"
 
 
 ## Import data from LiPD files
