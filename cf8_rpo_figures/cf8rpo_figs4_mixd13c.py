@@ -66,7 +66,7 @@ ax.set_xticks(
     labels=['Lake Sediment','MIS 5 Soil','Postglacial Soil','Aquatic Biomass']
 )
 ax.set_xlabel("")
-ax.set_ylabel("d13C (%)")
+ax.set_ylabel("Bulk d13C")
 
 figs4_mixd13c = plt.gcf()
 # figs4_mixd13c.savefig('cf8rpo_figs4_mixd13c.svg')
