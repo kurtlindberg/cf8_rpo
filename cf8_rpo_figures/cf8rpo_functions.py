@@ -1,28 +1,30 @@
 # Postglacial carbon cycling history of a northeastern Baffin Island lake catchment inferred from ramped pyrolysis oxidation and radiocarbon dating
 
-## Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
-## Gregory A. de Wet, Benjamin V. Gaglioti
+# Manuscript authors: Kurt R. Lindberg, Elizabeth K. Thomas, Brad E. Rosenheim, Gifford H. Miller, Julio Sepulveda, Devon R. Firesinger,
+# Gregory A. de Wet, Benjamin V. Gaglioti
 
-## DOI: pending
+# DOI: pending
 
-## Code Author: Kurt R. Lindberg
+# Code Author: Kurt R. Lindberg
 
-### Supporting functions for cf8_rpo_figures Python scripts ###
+# Supporting functions for cf8_rpo_figures Python scripts
 
 
-## See cf8_rpo_conda_env.yml
+# See cf8_rpo_conda_env.yml
 import math
 import pandas as pd
 import numpy as np
 import pyleoclim as pyleo
 from pylipd.lipd import LiPD
 
-## Create age ensemble mapping function for associated LiPD files
+# Create age ensemble mapping function for associated LiPD files
 # Function from PyleoTutorials: Working with Age Ensembles
 # by Alexander James and Deborah Khider
 # https://linked.earth/PyleoTutorials/notebooks/L1_working_with_age_ensembles.html
-def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoDepth,
-                             value_name = None,value_unit = None,time_name = None,time_unit = None):
+def mapAgeEnsembleToPaleoData(
+    ensembleValues, paleoValues, ensembleDepth, paleoDepth,
+    value_name = None, value_unit = None, time_name = None, time_unit = None
+):
     """ Map the depth for the ensemble age values to the paleo values
 
     Parameters
@@ -64,12 +66,12 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
 
     """
 
-    #Make sure that numpy arrays were given and try to coerce them into vectors if possible
+    # Make sure that numpy arrays were given and try to coerce them into vectors if possible
     ensembleDepth=np.squeeze(np.array(ensembleDepth))
     paleoValues = np.squeeze(np.array(paleoValues))
     paleoDepth = np.squeeze(np.array(paleoDepth))
 
-    #Check that arrays are vectors for np.interp
+    # Check that arrays are vectors for np.interp
     if paleoValues.ndim > 1:
         raise ValueError('ensembleValues has more than one dimension, please pass it as a 1D array')
     if ensembleDepth.ndim > 1:
@@ -83,7 +85,7 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
     if len(paleoValues) != len(paleoDepth):
         raise ValueError("Paleo depth and age need to have the same length")
 
-    #Interpolate
+    # Interpolate
     ensembleValuesToPaleo = np.zeros((len(paleoDepth),np.shape(ensembleValues)[1])) #placeholder
 
     for i in np.arange(0,np.shape(ensembleValues)[1]):
@@ -92,13 +94,15 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
     series_list = []
 
     for s in ensembleValuesToPaleo.T:
-        series_tmp = pyleo.Series(time=s, value=paleoValues,
-                       verbose=False,
-                       clean_ts=False,
-                       value_name=value_name,
-                       value_unit=value_unit,
-                       time_name=time_name,
-                       time_unit=time_unit)
+        series_tmp = pyleo.Series(
+            time=s, value=paleoValues,
+            verbose=False,
+            clean_ts=False,
+            value_name=value_name,
+            value_unit=value_unit,
+            time_name=time_name,
+            time_unit=time_unit
+        )
         series_list.append(series_tmp)
 
     ensemble = pyleo.EnsembleSeries(series_list=series_list)
@@ -106,18 +110,20 @@ def mapAgeEnsembleToPaleoData(ensembleValues, paleoValues, ensembleDepth, paleoD
     return ensemble
 
 
-## Define function for importing LiPD data
+# Define function for importing LiPD data
 
 # filename = name of LiPD file
 # paleoData_variableName = column name of variable being imported
 # depth_name = column name of depth variable (for using depths in multiple paleoData tables)
 # val_unit = unit of the variable being imported
 # ens_num = index of paleo data table containing the imported variable
-def getlipd(filename,
-            paleoData_variableName,
-            depth_name,
-            val_unit,
-            ens_num=0):
+def getlipd(
+    filename,
+        paleoData_variableName,
+        depth_name,
+        val_unit,
+        ens_num=0
+):
 
     D = LiPD()
     D.load(filename)
@@ -161,17 +167,17 @@ def getlipd(filename,
     )
 
     age_axis = pd.DataFrame(
-      {
-        'depth':paleoDepth,
-        'ageMedian':paleoAgeMedian,
-        'paleoData_values':paleoValues
-      }
+        {
+            'depth':paleoDepth,
+            'ageMedian':paleoAgeMedian,
+            'paleoData_values':paleoValues
+        }
     )
 
     return ensemble, age_axis
 
 
-## Convert fraction modern values to uncalibrated 14C yrs
+# Convert fraction modern values to uncalibrated 14C yrs
 def fm_to14c(fm):
     fm_arr = np.array(fm)
     to14c = -8033*np.log(fm_arr)
@@ -179,7 +185,7 @@ def fm_to14c(fm):
     return to14c
 
 
-## Convert fraction modern values to delta 14C
+# Convert fraction modern values to delta 14C
 def fm_todel14c(fm, yc):
     lam = 1/8267
     fm_arr = np.array(fm)
@@ -188,7 +194,7 @@ def fm_todel14c(fm, yc):
     return todel14c
 
 
-## Convert delta 14C to uncalibrated 14C yrs
+# Convert delta 14C to uncalibrated 14C yrs
 def del14c_to14c(del14c, yc):
     lam = 1/8267
     del14c_arr = np.array(del14c)
