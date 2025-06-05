@@ -358,7 +358,7 @@ ax.set_xticks([])
 ax.set_xticklabels("")
 ax.set_yticks(ticks=[-25,-26.25,-27.5,-28.75,-30])
 ax.set_xlabel("")
-ax.set_ylabel("Aggasiz Ice Core d18O (permil)")
+ax.set_ylabel("Agassiz Ice Cap d18O (permil)")
 ax.grid(visible=False)
 
 # Figure 5d: Elemental Analyzer % Carbon
@@ -420,7 +420,7 @@ ax.set_xticks([])
 ax.set_yticks(ticks=[0,200,400,600])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('Chironomid Head Capsuled per cc wet sed.')
+ax.set_ylabel('Chironomid Head Capsules per cc wet sed.')
 ax.legend([])
 ax.grid(visible=False)
 
