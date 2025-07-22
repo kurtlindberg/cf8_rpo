@@ -112,6 +112,7 @@ fig.delaxes(axs[1,0])
 fig.delaxes(axs[1,1])
 
 figs12 = plt.gcf()
+# Uncomment to save figure
 # figs12.savefig('cf8rpo_figs12_tmaxmix.svg')
 
 
