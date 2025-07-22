@@ -64,4 +64,5 @@ ax.legend([])
 ax.grid(visible=False)
 
 figs3 = plt.gcf()
+# Uncomment to save figure
 # figs3.savefig('cf8rpo_figs3_expollen.svg')
