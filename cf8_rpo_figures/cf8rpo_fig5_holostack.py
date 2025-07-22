@@ -309,9 +309,17 @@ ax.fill_between(
 
 ax.set_xlim([12500,0])
 ax.set_ylim([-1,10])
-ax.set_xticks([])
-ax.set_xticklabels("")
-ax.set_yticks(ticks=[0,2.5,5,7.5,10])
+ax.xaxis.set_label_position("top")
+ax.xaxis.set_ticks_position("top")
+ax.set_xticks(
+    ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+    labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
+)
+ax.set_xlabel('Age (cal yr BP)')
+ax.set_yticks(
+    ticks=[0,2.5,5,7.5,10],
+    labels=[0,"",5,"",10]
+)
 ax.set_ylabel('OC Accumulation Rate (g OC/m2/yr)')
 ax.legend([])
 ax.grid(visible=False)
@@ -330,14 +338,18 @@ cf8_chir_lt10_ens.common_time(
 ax.plot(
     cf8_chir_lt10.ageMedian, cf8_chir_lt10.paleoData_values,
     linewidth=1, linestyle='--', color='black',
+    marker='o', markersize=3,
     zorder=100
 )
 
 ax.set_xlim([12500,0])
-ax.set_ylim([50,0])
+ax.set_ylim([50,-5])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_yticks(ticks=[0,12.5,25,37.5,50])
+ax.set_yticks(
+    ticks=[0,12.5,25,37.5,50],
+    labels=[0,"",25,"",50]
+)
 ax.set_xlabel("")
 ax.set_ylabel('Chironomid Taxa % <10 C Optima')
 ax.yaxis.set_label_position("right")
@@ -356,9 +368,12 @@ ax.set_xlim([12500,0])
 ax.set_ylim([-30,-25])
 ax.set_xticks([])
 ax.set_xticklabels("")
-ax.set_yticks(ticks=[-25,-26.25,-27.5,-28.75,-30])
+ax.set_yticks(
+    ticks=[-25,-26.25,-27.5,-28.75,-30],
+    labels=[-25,"",-27.5,"",-30]
+)
 ax.set_xlabel("")
-ax.set_ylabel("Agassiz Ice Cap d18O (permil)")
+ax.set_ylabel("Agassiz Ice Core d18O (permil)")
 ax.grid(visible=False)
 
 # Figure 5d: Elemental Analyzer % Carbon
@@ -375,13 +390,17 @@ ea_totalc_ens.common_time(
 ax.plot(
     ea_totalc.ageMedian, ea_totalc.paleoData_values,
     linewidth=1, linestyle='--', color='black',
+    marker='o', markersize=3,
     zorder=100
 )
 
 ax.set_xlim([12500,0])
 ax.set_ylim([0,16])
 ax.set_xticks([])
-ax.set_yticks(ticks=[0,4,8,12,16])
+ax.set_yticks(
+    ticks=[0,4,8,12,16],
+    labels=[0,"",8,"",16]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel('% C')
@@ -391,6 +410,7 @@ ax.legend([])
 ax.grid(visible=False)
 
 figure5_1 = plt.gcf()
+# Uncomment to save figure
 # figure5_1.savefig('cf8rpo_figure5_1.svg')
 
 
@@ -409,8 +429,9 @@ cf8_chir_headcount_ens.common_time(
     plot_legend=False
 )
 ax.plot(
-  cf8_chir_headcount.ageMedian, cf8_chir_headcount.paleoData_values,
-  linewidth=1, linestyle='--', color='black',
+    cf8_chir_headcount.ageMedian, cf8_chir_headcount.paleoData_values,
+    linewidth=1, linestyle='--', color='black',
+    marker='o', markersize=3,
     zorder=100
 )
 
@@ -420,7 +441,7 @@ ax.set_xticks([])
 ax.set_yticks(ticks=[0,200,400,600])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('Chironomid Head Capsules per cc wet sed.')
+ax.set_ylabel('Chironomid Head Capsuled per cc wet sed.')
 ax.legend([])
 ax.grid(visible=False)
 
@@ -438,6 +459,7 @@ ea_cn_ens.common_time(
 ax.plot(
     ea_cn.ageMedian, ea_cn.paleoData_values,
     linewidth=1, linestyle='--', color='black',
+    marker='o', markersize=3,
     zorder=100
 )
 
@@ -446,7 +468,10 @@ ax.set_ylim([8, 16])
 ax.set_xticks([])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_yticks(ticks=[8,10,12,14,16])
+ax.set_yticks(
+    ticks=[8,10,12,14,16],
+    labels=[8,"",12,"",16]
+)
 ax.yaxis.set_label_position("right")
 ax.yaxis.set_ticks_position("right")
 ax.legend([])
@@ -483,4 +508,5 @@ ax.grid(visible=False)
 fig.delaxes(axs[3])
 
 figure5_2 = plt.gcf()
+# Uncomment to save figure
 # figure5_2.savefig('cf8rpo_figure5_2.svg')
