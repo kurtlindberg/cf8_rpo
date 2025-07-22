@@ -441,7 +441,7 @@ ax.set_xticks([])
 ax.set_yticks(ticks=[0,200,400,600])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('Chironomid Head Capsuled per cc wet sed.')
+ax.set_ylabel('Chironomid Head Capsules per cc wet sed.')
 ax.legend([])
 ax.grid(visible=False)
 
@@ -474,6 +474,7 @@ ax.set_yticks(
 )
 ax.yaxis.set_label_position("right")
 ax.yaxis.set_ticks_position("right")
+ax.set_ylabel('C:N')
 ax.legend([])
 ax.grid(visible=False)
 
@@ -502,6 +503,7 @@ ax.set_xticks(
 )
 ax.set_yticks(ticks=[0,50,100,150])
 ax.set_xlabel('Age (cal yr BP)')
+ax.set_ylabel('MS')
 ax.legend([])
 ax.grid(visible=False)
 
