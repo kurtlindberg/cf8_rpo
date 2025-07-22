@@ -70,4 +70,5 @@ ax.set_xlabel('Sample Top Depth (cm)')
 ax.set_ylabel('RPO CO2 Age (14C yrs)')
 
 figs2 = plt.gcf()
+# Uncomment to save figure
 # figs2.savefig('cf8rpo_figs2_blankcorr.svg')
