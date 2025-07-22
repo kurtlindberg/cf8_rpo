@@ -360,4 +360,5 @@ axs[1].grid(visible=False)
 axs[2].grid(visible=False)
 
 fig3 = plt.gcf()
+# Uncomment to save figure
 # fig3.savefig('cf8rpo_fig3_ocstack.svg')
