@@ -77,4 +77,5 @@ ax.legend()
 ax.grid(visible=False)
 
 figs7 = plt.gcf()
+# Uncomment to save figure
 # figs7.savefig('cf8rpo_figs7_toc.svg')
