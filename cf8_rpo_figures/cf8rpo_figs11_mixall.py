@@ -65,8 +65,8 @@ sns.boxplot(
 )
 ax.set_ylim([-5,100])
 ax.set_yticks(
-  ticks=[0,25,50,75,100],
-  labels=[0,"",50,"",100]
+    ticks=[0,25,50,75,100],
+    labels=[0,"",50,"",100]
 )
 ax.set_xticklabels("")
 ax.set_xlabel("")
@@ -200,4 +200,5 @@ ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 ax.grid(visible=False)
 
 figs11 = plt.gcf()
+# Uncomment to save figure
 # figs11.savefig('cf8rpo_figs11_mixall.svg')
