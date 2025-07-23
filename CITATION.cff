@@ -1,4 +1,4 @@
-cff-version: 2025.07.22
+cff-version: 2025.07.23
 message: "Please cite the code for this study as below."
 authors:
   - family-names: "Lindberg"
@@ -7,5 +7,5 @@ authors:
 title: "Lake CF8 data and code for analysis, mixing models, and figures"
 version: v1.1.0
 doi: "10.5281/zenodo.13845043"
-date-released: 2025-07-22
+date-released: 2025-07-23
 url: "https://github.com/kurtlindberg/cf8_rpo"
