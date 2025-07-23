@@ -5,7 +5,7 @@ authors:
     given-names: "Kurt"
     orcid: "https://orcid.org/0000-0003-0863-1598"
 title: "Lake CF8 data and code for analysis, mixing models, and figures"
-version: v1.1.0
+version: v1.1.1
 doi: "10.5281/zenodo.13845043"
 date-released: 2025-07-23
 url: "https://github.com/kurtlindberg/cf8_rpo"
