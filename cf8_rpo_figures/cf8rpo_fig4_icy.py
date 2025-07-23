@@ -227,4 +227,5 @@ print(
 )
 
 fig4 = plt.gcf()
+# Uncomment to save figure
 # fig4.savefig('cf8rpo_fig4_icy.svg')

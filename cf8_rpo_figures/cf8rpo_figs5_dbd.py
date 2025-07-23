@@ -72,19 +72,19 @@ ax.vlines(
     color='gray'
 )
 ax.axvspan(
-  xmin=(rpo_dbd.paleoData_values[7]-rpo_dbdstdev.paleoData_values[7]),
-  xmax=(rpo_dbd.paleoData_values[7]+rpo_dbdstdev.paleoData_values[7]),
-  ymin=0, ymax=((120-107)/120),
-  color='gray', alpha=0.25
+    xmin=(rpo_dbd.paleoData_values[7]-rpo_dbdstdev.paleoData_values[7]),
+    xmax=(rpo_dbd.paleoData_values[7]+rpo_dbdstdev.paleoData_values[7]),
+    ymin=0, ymax=((120-107)/120),
+    color='gray', alpha=0.25
 )
 ax.vlines(x=rpo_dbd.paleoData_values[0], ymin=0, ymax=107,
     color='#d95f0e'
 )
 ax.axvspan(
-  xmin=(rpo_dbd.paleoData_values[0]-rpo_dbdstdev.paleoData_values[0]),
-  xmax=(rpo_dbd.paleoData_values[0]+rpo_dbdstdev.paleoData_values[0]),
-  ymin=((120-107)/120), ymax=1,
-  color='#d95f0e', alpha=0.25
+    xmin=(rpo_dbd.paleoData_values[0]-rpo_dbdstdev.paleoData_values[0]),
+    xmax=(rpo_dbd.paleoData_values[0]+rpo_dbdstdev.paleoData_values[0]),
+    ymin=((120-107)/120), ymax=1,
+    color='#d95f0e', alpha=0.25
 )
 
 ax.set_xticks(ticks=[0,0.25,0.5,0.75,1.0,1.25])
@@ -98,4 +98,5 @@ ax.grid(visible=False)
 fig.delaxes(axs[1])
 
 figs5 = plt.gcf()
+# Uncomment to save figure
 # figs5.savefig('cf8rpo_figs5_dbd.svg')

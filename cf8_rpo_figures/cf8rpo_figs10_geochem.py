@@ -207,4 +207,5 @@ ax.legend([])
 ax.grid(visible=False)
 
 figs10 = plt.gcf()
+# Uncomment to save figure
 # figs10.savefig('cf8rpo_figs10_geochem.svg')

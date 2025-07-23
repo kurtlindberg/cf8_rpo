@@ -99,4 +99,5 @@ fig.delaxes(axs[3])
 # fig.delaxes(axs[4])
 
 figs1bc = plt.gcf()
+# Uncomment to save figure
 # figs1bc.savefig('cf8rpo_figs1bc_strat.svg')

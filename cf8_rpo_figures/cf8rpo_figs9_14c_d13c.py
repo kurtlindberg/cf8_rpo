@@ -141,8 +141,8 @@ ax.vlines(x=0, ymin=0, ymax=12500, linestyles='--', color='black')
 
 ax.set_xlim([12500,-1500])
 ax.set_xticks(
-  ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
-  labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
+    ticks=[12000,11000,10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,0],
+    labels=[12000,"",10000,"",8000,"",6000,"",4000,"",2000,"",0]
 )
 ax.set_ylim([0,12500])
 ax.set_yticks(ticks=[12000,10000,8000,6000,4000,2000,0])
@@ -227,4 +227,5 @@ ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 ax.grid(visible=False)
 
 figs9 = plt.gcf()
+# Uncomment to save figure
 # figs9.savefig('cf8rpo_figs9_14c_d13c.svg')

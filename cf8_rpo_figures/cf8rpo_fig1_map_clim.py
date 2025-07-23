@@ -55,6 +55,7 @@ plt.plot(
 )
 
 fig1a = plt.gcf()
+# Uncomment to save figure
 # fig1a.savefig('cf8rpo_fig1a_map.svg')
 
 
@@ -172,4 +173,5 @@ ax.set_ylim([0,70])
 # fig.delaxes(axs[1,1])
 
 fig1b = plt.gcf()
+# Uncomment to save figure
 # fig1b.savefig('cf8rpo_fig1b_clim.svg')

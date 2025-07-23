@@ -47,4 +47,5 @@ ax.set_xticks(
 ax.set_ylabel("RPO Tmax (C)")
 
 figs6 = plt.gcf()
+# Uncomment to save figure
 # figs6.savefig('cf8rpo_figs6_tmax.svg')
