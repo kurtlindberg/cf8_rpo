@@ -209,7 +209,7 @@ ax.scatter(
     cf8soilage, cf8_noaa_soil.split5_d13C,
     marker='o', s=40, color='#b2182b', edgecolor='black', linewidths=0.75
 )
-ax.vlines(x=0, ymin=-35, ymax=-17.5, linestyles='--', colors='black')
+ax.vlines(x=0, ymin=-35, ymax=-15, linestyles='--', colors='black')
 
 ax.set_ylim([-35,-15])
 ax.set_xlim([12500,-1500])
@@ -222,7 +222,7 @@ ax.set_yticks(
     labels=[-35,"",-30,"",-25,"",-20,"",-15]
 )
 ax.set_ylabel('d13C (permil)')
-ax.set_xlabel('Age (cal byr BP)')
+ax.set_xlabel('Age (cal yr BP)')
 ax.legend(loc='center left', bbox_to_anchor=(1,0.5))
 ax.grid(visible=False)
 
