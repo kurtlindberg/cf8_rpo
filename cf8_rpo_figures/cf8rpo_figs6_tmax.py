@@ -29,6 +29,21 @@ cf8_noaa_rpo = pd.read_excel(
 )
 
 sample_type_num = [1,1,1,1,1,1,1,1,2,2,2,3,3]
+colors = [
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'orange',
+    'orange',
+    'orange',
+    'blue',
+    'blue'    
+]
 
 
 # Figure S6 script
@@ -36,13 +51,17 @@ fig, ax = plt.subplots(1,1)
 
 ax.scatter(
     sample_type_num, cf8_noaa_rpo.tmax,
-    s=125, edgecolors='black'
+    s=125, edgecolors='black', c=colors
 )
 ax.set_xlim([0.5,3.5])
 ax.set_ylim([350,550])
 ax.set_xticks(
     ticks=[1,2,3],
     labels=["Lake Sediment","Soil","Aquatic Moss"]
+)
+ax.set_yticks(
+    ticks=[350,375,400,425,450,475,500,525,550],
+    labels=[350,"",400,"",450,"",500,"",550]    
 )
 ax.set_ylabel("RPO Tmax (C)")
 

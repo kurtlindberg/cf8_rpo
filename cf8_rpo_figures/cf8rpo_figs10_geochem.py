@@ -88,11 +88,15 @@ ax.plot(
 
 ax.set_xlim([12500,0])
 ax.set_ylim([0,16])
+ax.set_yticks(
+    ticks=[0,4,8,12,16],
+    labels=[0,"",8,"",16]    
+)
 ax.set_xticks([])
 ax.set_yticks(ticks=[0,4,8,12,16])
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('EA %C')
+ax.set_ylabel('%C')
 ax.legend([])
 ax.grid(visible=False)
 
@@ -116,10 +120,13 @@ ax.plot(
 ax.set_xlim([12500,0])
 ax.set_ylim([8,16])
 ax.set_xticks([])
-ax.set_yticks(ticks=[8,10,12,14,16])
+ax.set_yticks(
+    ticks=[8,10,12,14,16],
+    labels=[8,"",12,"",16]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('EA C:N')
+ax.set_ylabel('C:N')
 ax.yaxis.set_label_position("right")
 ax.yaxis.set_ticks_position("right")
 ax.legend([])
@@ -145,10 +152,13 @@ ax.plot(
 ax.set_xlim([12500,0])
 ax.set_ylim([-35,-15])
 ax.set_xticks([])
-ax.set_yticks(ticks=[-35,-30,-25,-20,-15])
+ax.set_yticks(
+    ticks=[-35,-30,-25,-20,-15],
+    labels=[-35,"",-25,"",-15]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
-ax.set_ylabel('EA d13C (permil)')
+ax.set_ylabel('d13C (permil)')
 ax.legend([])
 ax.grid(visible=False)
 
@@ -168,7 +178,10 @@ mnfe_ens.common_time(
 ax.set_xlim([12500,0])
 ax.set_ylim([0,0.008])
 ax.set_xticks([])
-ax.set_yticks([0,0.002,0.004,0.006,0.008])
+ax.set_yticks(
+    ticks=[0,0.002,0.004,0.006,0.008],
+    labels=[0,"",0.004,"",0.008]
+)
 ax.set_xticklabels("")
 ax.set_xlabel("")
 ax.set_ylabel('Mn/Fe')

@@ -76,7 +76,7 @@ ax = axs[0,0]
 ax.scatter(
     tmax_mix.tmax, tmax_mix.mix_post*100,
     s=40, color='orange', edgecolors='black', zorder=2,
-    label="R = " + str(np.round(post_corr[0], decimals=3)) + "; p = " + str(np.round(post_corr[1], decimals=2))
+    label="r = " + str(np.round(post_corr[0], decimals=3)) + "; p = " + str(np.round(post_corr[1], decimals=2))
 )
 ax.plot(
     tmax_mix.tmax, (np.array(tmax_mix.tmax)*modelpost.coef_+modelpost.intercept_),
@@ -85,6 +85,7 @@ ax.plot(
 )
 ax.set_xlim([375,450])
 ax.set_ylim([0,100])
+ax.set_yticks(ticks=[0,25,50,75,100])
 ax.set_xlabel('RPO Tmax (C)')
 ax.set_ylabel('MixSIAR Postglacial %')
 ax.legend(loc='upper left')
@@ -95,7 +96,7 @@ ax = axs[0,1]
 ax.scatter(
     tmax_mix.tmax, tmax_mix.mix_aqua*100,
     s=40, color='blue', edgecolors='black', zorder=2,
-    label="R = " + str(np.round(aqua_corr[0], decimals=3)) + "; p = " + str(np.round(aqua_corr[1], decimals=2))
+    label="r = " + str(np.round(aqua_corr[0], decimals=3)) + "; p = " + str(np.round(aqua_corr[1], decimals=2))
 )
 ax.plot(
     tmax_mix.tmax, (np.array(tmax_mix.tmax)*modelaqua.coef_+modelaqua.intercept_),
@@ -103,6 +104,7 @@ ax.plot(
 )
 ax.set_xlim([375,450])
 ax.set_ylim([0,100])
+ax.set_yticks(ticks=[0,25,50,75,100])
 ax.set_xlabel('RPO Tmax (C)')
 ax.set_ylabel('MixSIAR Aquatic %')
 ax.legend(loc='upper left')
